@@ -1,3 +1,10 @@
+<?php
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,29 +24,37 @@
             <div class="list">
                 <ul>
                     <li><a href="#"><strong>Home</strong></a></li>
-                    <li><a href="amenities.html"><strong>Ameneties</strong></a></li>
+                    <li><a href="../Amenities Page/amenities.html"><strong>Ameneties</strong></a></li>
                     <li><a href="http://localhost:8080/cart/index.php"><strong>Add-ons</strong></a></li>
                     <li><a href="#"><strong>Reservation</strong></a></li>
-                    <li><a href="http://localhost:8080/login/login.php"><strong>Log in</strong></a></li>
+                    <script>
+                        if (isset($_SESSION["user"])) {
+                            <li><a href="../logout.php"><strong>Log out</strong></a></li>
+                        }
+                        else {
+                            <li><a href="../login.php"><strong>Log in</strong></a></li>
+                        }
+                    </script>
+
                 </ul>
             </div>
         </div>
         </div>
-    <div class="hey"> 
+    <div class="hey">
          <h2> ABOUT US </h2>
 
     </div>
         <div class="container">
-           
+
             <div class="image2">
             <img src="2.jpg" width="300px">
             </div>
 
-            <div class="introduction"> 
+            <div class="introduction">
                 <h4>Introducing Diwata Villa Resort - Where Enchantment Meets Luxury!</h4><br>
 
-                <h5>Escape to a world of unparalleled beauty and immerse yourself in a truly enchanting experience at Diwata Villa Resort. 
-                Nestled amidst lush greenery and overlooking breathtaking vistas, 
+                <h5>Escape to a world of unparalleled beauty and immerse yourself in a truly enchanting experience at Diwata Villa Resort.
+                Nestled amidst lush greenery and overlooking breathtaking vistas,
                 our resort is a sanctuary designed to transport you to a realm of relaxation and indulgence.</h>
             </div>
         </div>
@@ -59,9 +74,9 @@
                 </td>
             </tr>
 
-            
 
-        
+
+
 
 
           </table>

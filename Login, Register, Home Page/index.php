@@ -16,9 +16,8 @@ if (!isset($_SESSION["user"])) {
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Dashboard</h1>
-        <a href="login.php" ></a>
-        //class="btn btn-warning"
+        <h1>Welcome to the Dashboard</h1>
+        <a href="almazan/Homepage.php" class="btn btn-primary">Proceed to Login</a><span style="width: 230px; display: inline-block"></span><a href="logout.php" class="btn btn-danger">Log Out</a>
     </div>
 </body>
 </html>
