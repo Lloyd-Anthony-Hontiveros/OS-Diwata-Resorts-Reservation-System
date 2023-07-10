@@ -1,8 +1,8 @@
 <?php
 session_start();
- if (isset($_SESSION["user"])) {
-    header("Location: almazan/Homepage.php");
-}
+//  if (isset($_SESSION["user"])) {
+//     header("Location: almazan/Homepage.php");
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
