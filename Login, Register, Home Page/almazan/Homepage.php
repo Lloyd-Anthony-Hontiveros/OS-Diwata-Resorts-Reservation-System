@@ -24,17 +24,18 @@
             <div class="list">
                 <ul>
                     <li><a href="#"><strong>Home</strong></a></li>
-                    <li><a href="../Amenities Page/amenities.html"><strong>Ameneties</strong></a></li>
+                    <li><a href="../../Amenities Page/amenities.html"><strong>Ameneties</strong></a></li>
                     <li><a href="http://localhost:8080/cart/index.php"><strong>Add-ons</strong></a></li>
                     <li><a href="#"><strong>Reservation</strong></a></li>
-                    <script>
-                        if (isset($_SESSION["user"])) {
-                            <li><a href="../logout.php"><strong>Log out</strong></a></li>
+                    <?php
+                        //NOT WORKING
+                        if(!isset($_SESSION["user"])) {
+                            echo "<li><a href='../logout.php'><strong>Log out</strong></a></li>";
                         }
                         else {
-                            <li><a href="../login.php"><strong>Log in</strong></a></li>
+                            echo "<li><a href='../login.php'><strong>Log in</strong></a></li>";
                         }
-                    </script>
+                    ?>
 
                 </ul>
             </div>
@@ -69,8 +70,8 @@
 
             <tr>
                 <td> <i class="fa fa-phone" style="font-size:20px"></i> +639308584580 <br><i class="fa fa-envelope" style="font-size:24px"></i> diwatavilla@gmail.com</td>
-                <td> <i class="fa fa-map-marker" style="font-size:24px"></i>Pansol, Calamba City, Laguna</td>
-                <td><i class="fa fa-user" style="font-size:20px"></i> Christian Almazan<br> <i class="fa fa-user" style="font-size:20px"></i>Lloyd Hontiveros<br> <i class="fa fa-user" style="font-size:20px"></i>Ariel Nazareno
+                <td> <i class="fa fa-map-marker" style="font-size:24px"></i> Pansol, Calamba City, Laguna</td>
+                <td><i class="fa fa-user" style="font-size:20px"></i> Christian Almazan <br> <i class="fa fa-user" style="font-size:20px"></i> Lloyd Hontiveros <br> <i class="fa fa-user" style="font-size:20px"></i> Ariel Nazareno
                 </td>
             </tr>
 
