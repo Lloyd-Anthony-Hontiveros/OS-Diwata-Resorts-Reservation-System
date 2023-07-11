@@ -24,7 +24,7 @@
     $sql = "INSERT INTO `booking_status`(`Date`, `Payment Status`, `Booking Client`) VALUES ('$date','Paid','$name')";
     $result = mysqli_query($con, $sql);
 
-    header("location: test OS HTML.php");
+    header("location: test OS HTML stable.php");
     exit();
   }
 
