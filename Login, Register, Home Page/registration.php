@@ -1,8 +1,8 @@
 <?php
 session_start();
-if (isset($_SESSION["user"])) {
-   header("Location: index.php");
-}
+// if (isset($_SESSION["user"])) {
+//    header("Location: index.php");
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +59,18 @@ if (isset($_SESSION["user"])) {
             if ($prepareStmt) {
                 mysqli_stmt_bind_param($stmt,"sss",$fullName, $email, $passwordHash);
                 mysqli_stmt_execute($stmt);
-                echo "<div class='alert alert-success'>You are registered successfully.</div>";
+                echo "<div class='alert alert-success'>You are registered successfully! Redirecting in <span id='counter'>5</span>.</div>";
+                echo '
+                <script>
+                    setInterval(function() {
+                        var div = document.querySelector("#counter");
+                        var count = div.textContent * 1 - 1;
+                        div.textContent = count;
+                        if (count <= 0) {
+                            window.location.replace("login.php");
+                        }
+                    }, 1000);
+                </script>';
             }else{
                 die("Something went wrong");
             }

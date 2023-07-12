@@ -1,19 +1,7 @@
 <?php
 
-    //Connection Code Block
-    $serverName = "localhost";
-    $username = "root";
-    $password = "";
-    $DBname = "ostest_connectdb";
-    $con = mysqli_connect($serverName, $username, $password, $DBname);
+    require_once 'database.php';
 
-    //Connection Check Block
-    if ($con) {
-        echo "Test Sucessful";
-    }
-    else {
-        mysqli_connect_error();
-    }
 ?>
 
 <!DOCTYPE html>
@@ -25,8 +13,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entry</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap.css">
-    <script src="bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Referenced Frameworks/Bootstrap/bootstrap.css">
+    <script src="../Referenced Frameworks/Bootstrap/bootstrap.js"></script>
+
 
     <script>
     function clearForm() {
@@ -43,14 +32,14 @@
 
 <body>
     <!-- Form Action -> Link to PHP File -->
-    <form name="entryform" action="test OS Reserver.php" method="get">
-        <p>Date: </p>
+    <form name="entryform" action="test OS Reserver.php" method="get" class="position-absolute start-50" style="top: 200px; right: 150px">
+        <p><strong>Date:</strong>    </p>
         <input type="date" name="Date" id="Date" value="<?php echo isset($_GET['date']) ? $_GET['date'] : ''; ?>">
-        <p>Name: </p>
+        <p><strong>Name:</strong> </p>
         <input type="text" name="Name" id="Name">
-        <p>Price: </p>
+        <p><strong>Price:</strong> </p>
         <p>$250 / 1 Night</p>
-        <p>Payment Method: </p>
+        <p><strong>Payment Method:</strong></p>
         <div class="col-4">
             <div class="list-group list-group-horizontal" id="payment-options" role="tablist">
                 <a class="list-group-item list-group-item-action active" id="option-credit-cards" data-bs-toggle="list"
@@ -63,11 +52,10 @@
             <br>
             <div class="list-group list-group-horizontal" id="buttons-tab" role="tablist">
                 <input type="submit" class="list-group-item btn-danger" id="btn-clear" value="Book"></input>
-                <input type="button" class="list-group-item btn-danger" id="btn-clear" value="Clear" onclick="clearForm()"></input>
+                <input type="button" class="list-group-item btn-danger" id="btn-clear" value="Clear" onclick="clearForm()">
             </div>
         </div>
 
-    </form>
-</body>
+</form>
 
 </html>
