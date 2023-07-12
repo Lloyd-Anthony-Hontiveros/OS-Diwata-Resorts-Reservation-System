@@ -51,7 +51,7 @@
             </div>
             <br>
             <div class="list-group list-group-horizontal" id="buttons-tab" role="tablist">
-                <input type="submit" class="list-group-item btn-danger" id="btn-clear" value="Book"></input>
+                <input type="submit" class="list-group-item btn-danger" id="btn-book" value="Book"></input>
                 <input type="button" class="list-group-item btn-danger" id="btn-clear" value="Clear" onclick="clearForm()">
             </div>
         </div>

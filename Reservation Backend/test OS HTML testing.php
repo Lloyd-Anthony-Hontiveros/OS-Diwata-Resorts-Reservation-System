@@ -156,35 +156,37 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Reservation Entry</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <form class="col-4">
-                                    <div class="mb-3">
-                                        <label for="dateInput" class="col-form-label">Date:</label>
-                                        <input type="date" class="form-control" id="dateInput">
+                    <form action="test OS Reserver.php" method="GET">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Reservation Entry</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="mb-3">
+                                            <label for="dateInput" class="col-form-label">Date:</label>
+                                            <input type="date" class="form-control" id="dateInput">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="amenities-group" class="col-form-label">Amenities: </label>
+
+                                        </div>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="message-text" class="col-form-label">Name: </label>
-                                        <input type="text" class="form-control" id="message-text"></input>
+                                    <div class="col-8 ms-auto">
+                                        <img src="../Amenities Page/background.jpg" alt="background.jpg" class="img-fluid rounded mx-auto d-block col-8">
+                                        <p class=""></p>
                                     </div>
-                                </form>
-                                <div class="col-8 ms-auto">
-                                    <img src="../Amenities Page/background.jpg" alt="background.jpg" class="img-fluid rounded mx-auto d-block col-8">
-                                    <p class=""></p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-danger" onclick="clearForm()">Clear</button>
-                        <button type="button" class="btn btn-primary">Reserve</button>
-                    </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger" onclick="clearForm()">Clear</button>
+                            <input type="submit" class="btn btn-primary" value="Reserve"></input>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -213,10 +215,7 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
             const recipient = button.getAttribute('data-bs-date')
 
             // Update the modal's content.
-            // const modalTitle = exampleModal.querySelector('.modal-title')
             const modalBodyInput = exampleModal.querySelector('.modal-body input')
-
-            // modalTitle.textContent = `New message to ${recipient}`
             modalBodyInput.value = recipient
             })
         }
