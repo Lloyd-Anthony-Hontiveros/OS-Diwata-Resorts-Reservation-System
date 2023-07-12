@@ -154,7 +154,7 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
         <?php echo generateCalendarDates($Dec->startDay, $Dec->endDay, $Dec->monthNumber); ?>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                     <form action="test OS Reserver.php" method="GET">
                         <div class="modal-header">
@@ -173,6 +173,15 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
                                             <label for="amenities-group" class="col-form-label">Amenities: </label>
 
                                         </div>
+                                        <div class="mb-3">
+                                            <label for="head-count" class="col-form-label">Price per Person: &#8369;250</label>
+                                            <label for="head-count" class="col-form-label">Number of People: </label>
+                                            <input type="number" name="head-count" id="head-count" min="1" max="10">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control-plaintext fw-bold" id="total-price" value="Total Price: 0">
+
+                                        </div>
                                     </div>
                                     <div class="col-8 ms-auto">
                                         <img src="../Amenities Page/background.jpg" alt="background.jpg" class="img-fluid rounded mx-auto d-block col-8">
@@ -182,9 +191,9 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-danger" onclick="clearForm()">Clear</button>
-                            <input type="submit" class="btn btn-primary" value="Reserve"></input>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i> Close</button>
+                            <button type="button" class="btn btn-danger" onclick="clearForm()"><i class="fa-solid fa-xmark"></i> Clear</button>
+                            <input type="submit" class="btn btn-primary" value="Reserve"><i class="fa-solid fa-check"></i></input>
                         </div>
                     </form>
                 </div>
@@ -196,13 +205,13 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
         </script>
     </div>
     <script src="../Referenced Frameworks/Bootstrap/bootstrap.js"></script>
-    <script src="../Referenced Frameworks/jquery-3.7.0.min"></script>
+    <script src="../Referenced Frameworks/jquery-3.7.0.min.js"></script>
     <script>
 
         //Clear Function
         function clearForm() {
         document.getElementById("dateInput").value = ""; // Clear the Date input field
-        document.getElementById("Name").value = ""; // Clear the Name input field
+        document.getElementById("head-count").value = ""; // Clear the Name input field
         }
 
         //Modal Overlay Script
@@ -219,6 +228,16 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
             modalBodyInput.value = recipient
             })
         }
+
+        //Detect Changes in Input and Update Price in Real Time
+        $(document).ready(function() {
+            $("#head-count").on('input', function() {
+                var headcount = document.getElementById("head-count").value;
+                document.getElementById("total-price").value = "Total Price: " + (headcount * 250);
+            });
+        });
+
+
     </script>
 </body>
 
