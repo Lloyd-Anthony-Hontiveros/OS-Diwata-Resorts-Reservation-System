@@ -170,6 +170,10 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
                                             <input type="date" class="form-control" id="dateInput">
                                         </div>
                                         <div class="mb-3">
+                                            <label for="dateInput" class="col-form-label">Name:</label>
+                                            <input type="text" class="form-control" id="name">
+                                        </div>
+                                        <div class="mb-3">
                                             <label for="amenities-group" class="col-form-label">Addons: </label>
                                                 <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
                                                 <br>

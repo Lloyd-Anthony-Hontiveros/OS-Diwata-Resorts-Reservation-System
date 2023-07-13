@@ -392,7 +392,6 @@
   </div>
   <script src="dashboard_files/bootstrap.bundle.min.js"></script>
 
-  <script src="dashboard_files/chart.umd.min.js"></script>
   <script src="dashboard_files/dashboard.js"></script>
 
 </body>
