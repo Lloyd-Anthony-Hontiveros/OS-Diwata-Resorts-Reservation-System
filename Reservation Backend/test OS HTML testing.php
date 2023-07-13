@@ -164,14 +164,30 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
                         <div class="modal-body">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-8 m-auto">
                                         <div class="mb-3">
                                             <label for="dateInput" class="col-form-label">Date:</label>
                                             <input type="date" class="form-control" id="dateInput">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="amenities-group" class="col-form-label">Amenities: </label>
+                                            <label for="amenities-group" class="col-form-label">Addons: </label>
+                                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                                <br>
+                                                <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
 
+                                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+
+                                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+                                                <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="btncheck4">Checkbox 4</label>
+
+                                                <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="btncheck5">Checkbox 5</label>
+
+                                                <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="btncheck6">Checkbox 6</label>
                                         </div>
                                         <div class="mb-3">
                                             <label for="head-count" class="col-form-label">Price per Person: &#8369;250</label>
@@ -182,10 +198,6 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
                                             <input type="text" class="form-control-plaintext fw-bold" id="total-price" value="Total Price: 0">
 
                                         </div>
-                                    </div>
-                                    <div class="col-8 ms-auto">
-                                        <img src="../Amenities Page/background.jpg" alt="background.jpg" class="img-fluid rounded mx-auto d-block col-8">
-                                        <p class=""></p>
                                     </div>
                                 </div>
                             </div>
