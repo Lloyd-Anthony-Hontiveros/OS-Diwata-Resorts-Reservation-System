@@ -154,37 +154,64 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
         <?php echo generateCalendarDates($Dec->startDay, $Dec->endDay, $Dec->monthNumber); ?>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Reservation Entry</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <form class="col-4">
-                                    <div class="mb-3">
-                                        <label for="dateInput" class="col-form-label">Date:</label>
-                                        <input type="date" class="form-control" id="dateInput">
+                    <form action="test OS Reserver.php" method="GET">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Reservation Entry</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-8 m-auto">
+                                        <div class="mb-3">
+                                            <label for="dateInput" class="col-form-label">Date:</label>
+                                            <input type="date" class="form-control" id="dateInput">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="dateInput" class="col-form-label">Name:</label>
+                                            <input type="text" class="form-control" id="name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="amenities-group" class="col-form-label">Addons: </label>
+                                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                                <br>
+                                                <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+
+                                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+
+                                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+                                                <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="btncheck4">Checkbox 4</label>
+
+                                                <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="btncheck5">Checkbox 5</label>
+
+                                                <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="btncheck6">Checkbox 6</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="head-count" class="col-form-label">Price per Person: &#8369;500</label>
+                                            <label for="head-count" class="col-form-label">Number of People: </label>
+                                            <input type="number" name="head-count" id="head-count" min="1" max="10">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control-plaintext fw-bold" id="total-price" value="Total Price: 0">
+
+                                        </div>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="message-text" class="col-form-label">Name: </label>
-                                        <input type="text" class="form-control" id="message-text"></input>
-                                    </div>
-                                </form>
-                                <div class="col-8 ms-auto">
-                                    <img src="../Amenities Page/background.jpg" alt="background.jpg" class="img-fluid rounded mx-auto d-block col-8">
-                                    <p class=""></p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-danger" onclick="clearForm()">Clear</button>
-                        <button type="button" class="btn btn-primary">Reserve</button>
-                    </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i> Close</button>
+                            <button type="button" class="btn btn-danger" onclick="clearForm()"><i class="fa-solid fa-xmark"></i> Clear</button>
+                            <input type="submit" class="btn btn-primary" value="Reserve"><i class="fa-solid fa-check"></i></input>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -194,13 +221,13 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
         </script>
     </div>
     <script src="../Referenced Frameworks/Bootstrap/bootstrap.js"></script>
-    <script src="../Referenced Frameworks/jquery-3.7.0.min"></script>
+    <script src="../Referenced Frameworks/jquery-3.7.0.min.js"></script>
     <script>
 
         //Clear Function
         function clearForm() {
         document.getElementById("dateInput").value = ""; // Clear the Date input field
-        document.getElementById("Name").value = ""; // Clear the Name input field
+        document.getElementById("head-count").value = ""; // Clear the Name input field
         }
 
         //Modal Overlay Script
@@ -213,13 +240,20 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
             const recipient = button.getAttribute('data-bs-date')
 
             // Update the modal's content.
-            // const modalTitle = exampleModal.querySelector('.modal-title')
             const modalBodyInput = exampleModal.querySelector('.modal-body input')
-
-            // modalTitle.textContent = `New message to ${recipient}`
             modalBodyInput.value = recipient
             })
         }
+
+        //Detect Changes in Input and Update Price in Real Time
+        $(document).ready(function() {
+            $("#head-count").on('input', function() {
+                var headcount = document.getElementById("head-count").value;
+                document.getElementById("total-price").value = "Total Price: " + (headcount * 500);
+            });
+        });
+
+
     </script>
 </body>
 
