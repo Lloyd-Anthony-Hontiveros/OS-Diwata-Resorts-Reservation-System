@@ -194,7 +194,7 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
                                                 <label class="btn btn-outline-primary" for="btncheck6">Checkbox 6</label>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="head-count" class="col-form-label">Price per Person: &#8369;250</label>
+                                            <label for="head-count" class="col-form-label">Price per Person: &#8369;500</label>
                                             <label for="head-count" class="col-form-label">Number of People: </label>
                                             <input type="number" name="head-count" id="head-count" min="1" max="10">
                                         </div>
@@ -249,7 +249,7 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
         $(document).ready(function() {
             $("#head-count").on('input', function() {
                 var headcount = document.getElementById("head-count").value;
-                document.getElementById("total-price").value = "Total Price: " + (headcount * 250);
+                document.getElementById("total-price").value = "Total Price: " + (headcount * 500);
             });
         });
 
