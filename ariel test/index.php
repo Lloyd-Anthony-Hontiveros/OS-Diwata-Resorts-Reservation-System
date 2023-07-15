@@ -1,5 +1,6 @@
 <?php
-if (isset($_GET['search'])) {
+if(isset($_GET['search']))
+{
 	header("location:search.php");
 }
 
@@ -14,20 +15,20 @@ if (isset($_GET['search'])) {
 
 
 <head>
-	<meta charset="UTF-8">
-	<title>Villa Diwata Resort</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Linking Bootstrap css file -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<!-- Linking Main Css file -->
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/flatpickr.min.css">
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/color.css">
-	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-
+<meta charset="UTF-8">
+<title>Villa Diwata Resort</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Linking Bootstrap css file -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- Linking Main Css file -->
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/flatpickr.min.css">
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/color.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 
@@ -39,18 +40,18 @@ if (isset($_GET['search'])) {
 				<div class="container">
 					<div class="con-links">
 						<ul>
-							<li><i class="fas fa-phone" aria-hidden="true"></i> (+63)9636342280</li>
+							<li><i class="fa fa-phone" aria-hidden="true"></i> (+63)9636342280</li>
 							<li><i class="fa fa-envelope" aria-hidden="true"></i> ACL@gmail.com</li>
 						</ul>
 					</div><!--con-links end-->
 					<div class="social-links">
 						<ul class="social-lnks">
-							<li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
-
+							<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
+							<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
+							<li><a href="#" title=""><i class="fa-brands fa-instagram"></i></a></li>
+						
 						</ul>
-
+						
 					</div><!--socail-links end-->
 				</div>
 			</div><!--top-bar end-->
@@ -65,17 +66,17 @@ if (isset($_GET['search'])) {
 						<div class="menu-search">
 							<nav>
 								<ul>
-									<li class="active menu-item-has-children"><a href="index.php" title=""><i
-												class="fa fa-joomla"></i>Home</a>
-
+									<li class="active menu-item-has-children"><a href="index.php" title=""><i class="fa-solid fa-house"></i>Home</a>
+										
 									</li>
-
+									
 									<li><a href="about.php" title="">About Us</a></li>
-									<li><a href="term.php" title="">Terms and Condition</a></li>
+										<li><a href="term.php" title="">Terms and Condition</a></li>
 									<li><a href="contact.php" title="">Contact Us</a></li>
+									<li><a href="reservation.php" title="">Reservation</a></li>
 								</ul>
-							</nav><!--nav end-->
-
+		 					</nav><!--nav end-->
+							
 						</div><!--menu-search end-->
 						<div class="menu-icon">
 							<span class="first-bar"></span>
@@ -87,8 +88,8 @@ if (isset($_GET['search'])) {
 			</div><!--bottom-header end-->
 		</header><!--Header end-->
 
-
-
+		
+		
 		<section id="home" class="home-bg">
 			<div class="block remove-btm-gap">
 				<div class="container">
@@ -97,32 +98,28 @@ if (isset($_GET['search'])) {
 							<div class="home-detial">
 								<div class="home-banner">
 									<div class="block">
-
-										<div class="greeting">
-											<h3>Welcome to</h3>
-										</div>
-										<div class="greeting2">
-											<h2>Villa Diwata</h2>
-										</div>
+									
+										<div class="greeting"><h3>Welcome to</h3></div>
+										<div class="greeting2"><h2>Villa Diwata</h2></div>
 										<div class="service-block">
 											<i class="fa fa-wifi"></i>
 											<div>
 												<h5>Free WI-FI</h5>
-												<span>in Villa Resort</span>
+												<span>in Villa Resort</span> 
 											</div>
 										</div>
 										<div class="service-block">
 											<i class="fa fa-television"></i>
 											<div>
 												<h5>Cable TV</h5>
-												<span>Free Cable TV</span>
+												<span>Free Cable TV</span> 
 											</div>
 										</div>
 										<div class="service-block">
 											<i class="fa fa-coffee"></i>
 											<div>
 												<h5>Restaurant</h5>
-												<span>Coffee&Resturant</span>
+												<span>Coffee&Resturant</span> 
 											</div>
 										</div>
 									</div>
@@ -131,8 +128,8 @@ if (isset($_GET['search'])) {
 									<div class="find-room">
 										<div class="search-room">
 											<h3>Search A Room </h3>
-
-											<form action='search.php' method='get'>
+											
+											<form    action='search.php' method='get'>
 												<div>
 													<label>
 														<select name='type'>
@@ -146,8 +143,8 @@ if (isset($_GET['search'])) {
 														<i class="fa fa-building-o"></i>
 													</label>
 												</div>
-
-
+													
+												
 												<div>
 													<label>
 														<select name='adult'>
@@ -164,25 +161,24 @@ if (isset($_GET['search'])) {
 													<label>
 														<select name='child'>
 															<option>Child</option>
-															<option value='1'>1</option>
-															<option value='2'>2</option>
-															<option value='3'>3</option>
-															<option value='4'>4</option>
+															<option  value='1'>1</option>
+															<option  value='2'>2</option>
+															<option  value='3'>3</option>
+															<option  value='4'>4</option>
 														</select>
 														<i class="fa fa-angle-down	"></i>
 													</label>
 												</div>
-
+										
 										</div>
 										<div class="other-options">
-											<button type="submit" name='search' class="searching"
-												value="Search Now">Search now</button>
-
+										<button type="submit" name='search' class="searching" value="Search Now" >Search now</button>
+											
 										</div>
-										</form>
+											</form>
 									</div><!--find-room end-->
 								</div><!--room-finding end-->
-
+								
 							</div>
 						</div>
 					</div>
@@ -200,12 +196,8 @@ if (isset($_GET['search'])) {
 								<div class="title">
 									<h3>About Villa Diwata Resort</h3>
 								</div><!--title end-->
-								<h5><a href="about.php" title="">Introducing Diwata Villa Resort - Where Enchantment
-										Meets Luxury!</a></h5>
-								<p>Escape to a world of unparalleled beauty and immerse yourself in a truly enchanting
-									experience at Diwata Villa Resort. Nestled amidst lush greenery and overlooking
-									breathtaking vistas, our resort is a sanctuary designed to transport you to a realm
-									of relaxation and indulgence.</p>
+								<h5><a href="about.php" title="">Introducing Diwata Villa Resort - Where Enchantment Meets Luxury!</a></h5>
+								<p>Escape to a world of unparalleled beauty and immerse yourself in a truly enchanting experience at Diwata Villa Resort. Nestled amidst lush greenery and overlooking breathtaking vistas, our resort is a sanctuary designed to transport you to a realm of relaxation and indulgence.</p>
 								<ul class="ab-links">
 									<h3>Operators:</h3>
 									<li><i class="fa fa-user"></i>Ariel Nazareno</li>
@@ -225,14 +217,14 @@ if (isset($_GET['search'])) {
 										<div class="fav-room">
 											<img src="images/resources/fav-room1.jpg" alt="">
 											<div class="fav-rm-data">
-												<h3><a href="#" title="">Room Type: Family size
-														Aircondition<br>
-														Max Adults: 4<br>
-														Max Children: 4<br>
-														Rate per Night: ₱ 1800</a></h3>
-
-
-
+												<h3><a href="#" title="">Room Type: Family size 
+												Aircondition<br>
+												Max Adults: 4<br>
+												Max Children: 4<br>
+												Rate per Night: ₱ 1800</a></h3>
+											
+												
+											
 											</div>
 										</div><!--fav-room end-->
 									</div>
@@ -240,12 +232,12 @@ if (isset($_GET['search'])) {
 										<div class="fav-room">
 											<img src="images/resources/fav-room2.jpg" alt="">
 											<div class="fav-rm-data">
-												<h3><a href="#" title="">Room Type: Family size
-														Aircondition<br>
-														Max Adults: 4<br>
-														Max Children: 4<br>
-														Rate per Night: ₱ 2000</a> </h3>
-
+												<h3><a href="#" title="">Room Type: Family size 
+												Aircondition<br>
+												Max Adults: 4<br>
+												Max Children: 4<br>
+												Rate per Night: ₱ 2000</a> </h3>
+											
 											</div>
 										</div><!--fav-room end-->
 									</div>
@@ -253,12 +245,12 @@ if (isset($_GET['search'])) {
 										<div class="fav-room">
 											<img src="images/resources/fav-room3.jpg" alt="">
 											<div class="fav-rm-data">
-												<h3><a href="#" title="">Room Type: Family size
-														Aircondition<br>
-														Max Adults: 4<br>
-														Max Children: 4<br>
-														Rate per Night: ₱ 2500</a></h3>
-
+												<h3><a href="#" title="">Room Type: Family size 
+												Aircondition<br>
+												Max Adults: 4<br>
+												Max Children: 4<br>
+												Rate per Night: ₱ 2500</a></h3>
+											
 											</div>
 										</div><!--fav-room end-->
 									</div>
@@ -331,7 +323,7 @@ if (isset($_GET['search'])) {
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>	
 
 
 		<section>
@@ -346,7 +338,7 @@ if (isset($_GET['search'])) {
 								<div class="option-isotop">
 									<ul id="filter" class="option-set filters-nav" data-option-key="filter">
 										<li><a class="selected" data-option-value="*">Rooms Highligts</a></li>
-
+									
 									</ul>
 								</div>
 							</div><!-- FILTER BUTTONS -->
@@ -366,9 +358,7 @@ if (isset($_GET['search'])) {
 												</ul>
 											</figcaption>
 											<div class="popup-icon">
-												<a class="html5lightbox" data-thumbnail="images/resources/gallery1.jpg"
-													data-group="set1" href="images/resources/gallery1.jpg"
-													title="home 1"><i class="fa fa-compress"></i></a>
+												<a class="html5lightbox" data-thumbnail="images/resources/gallery1.jpg" data-group="set1" href="images/resources/gallery1.jpg" title="home 1"><i class="fa fa-compress"></i></a>
 											</div>
 										</figure>
 									</div>
@@ -388,9 +378,7 @@ if (isset($_GET['search'])) {
 												</ul>
 											</figcaption>
 											<div class="popup-icon">
-												<a class="html5lightbox" data-thumbnail="images/resources/gallery2.jpg"
-													data-group="set1" href="images/resources/gallery2.jpg"
-													title="home 2"><i class="fa fa-compress"></i></a>
+												<a class="html5lightbox" data-thumbnail="images/resources/gallery2.jpg" data-group="set1" href="images/resources/gallery2.jpg" title="home 2"><i class="fa fa-compress"></i></a>
 											</div>
 										</figure>
 									</div>
@@ -410,9 +398,7 @@ if (isset($_GET['search'])) {
 												</ul>
 											</figcaption>
 											<div class="popup-icon">
-												<a class="html5lightbox" data-thumbnail="images/resources/gallery3.jpg"
-													data-group="set1" href="images/resources/gallery3.jpg"
-													title="home 3"><i class="fa fa-compress"></i></a>
+												<a class="html5lightbox" data-thumbnail="images/resources/gallery3.jpg" data-group="set1" href="images/resources/gallery3.jpg" title="home 3"><i class="fa fa-compress"></i></a>
 											</div>
 										</figure>
 									</div>
@@ -433,9 +419,7 @@ if (isset($_GET['search'])) {
 												</ul>
 											</figcaption>
 											<div class="popup-icon">
-												<a class="html5lightbox" data-thumbnail="images/resources/gallery4.jpg"
-													data-group="set1" href="images/resources/gallery4.jpg"
-													title="home 4"><i class="fa fa-compress"></i></a>
+												<a class="html5lightbox" data-thumbnail="images/resources/gallery4.jpg" data-group="set1" href="images/resources/gallery4.jpg" title="home 4"><i class="fa fa-compress"></i></a>
 											</div>
 										</figure>
 									</div>
@@ -456,9 +440,7 @@ if (isset($_GET['search'])) {
 												</ul>
 											</figcaption>
 											<div class="popup-icon">
-												<a class="html5lightbox" data-thumbnail="images/resources/gallery5.jpg"
-													data-group="set1" href="images/resources/gallery5.jpg"
-													title="home 5"><i class="fa fa-compress"></i></a>
+												<a class="html5lightbox" data-thumbnail="images/resources/gallery5.jpg" data-group="set1" href="images/resources/gallery5.jpg" title="home 5"><i class="fa fa-compress"></i></a>
 											</div>
 										</figure>
 									</div>
@@ -476,13 +458,13 @@ if (isset($_GET['search'])) {
 			<div class="pd-btm-less">
 				<div class="container">
 					<div class="partners-logo">
-
+						
 					</div><!--partners-logo end-->
 				</div>
 			</div>
 		</section>
 
-
+		
 
 
 
@@ -517,14 +499,14 @@ if (isset($_GET['search'])) {
 									<div class="widget">
 										<div class="about-widget">
 											<a href="#" title=""><img src="images/icon logo.jpg" alt=""></a>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-												nonummy nibh euismod it tincidunt ut laoreet commodo consequat. </p>
-
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,  sed diam nonummy nibh euismod it tincidunt ut laoreet commodo consequat.  </p>
+										
 											<ul class="sc-links">
-												<li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-												<li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-												<li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
-
+											<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
+											<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
+											<li><a href="#" title=""><i class="fa-brands fa-instagram"></i></a></li>
+						
+											
 											</ul>
 										</div><!--about-widget end-->
 									</div><!--widget end-->
@@ -613,29 +595,28 @@ if (isset($_GET['search'])) {
 								<p>THANKYOU EVERYONE</p>
 							</div><!--copyright end-->
 							<div class="credit">
-								<p>Project of: <a href="#" title>Ariel Nazareno, Christian Almazan, LLoyd Hontiveros</a>
-								</p>
+								<p>Project of: <a href="#" title>Ariel Nazareno, Christian Almazan, LLoyd Hontiveros</a></p>
 							</div><!--credit end-->
 						</div><!--bottom-footer end-->
 					</div>
 				</div>
 			</div>
 		</footer><!--footer end-->
-
+		
 	</div><!--wrapper end-->
 
-	<!-- Including Jquery Js File -->
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<!-- Including Bootstrap js file -->
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="js/flatpickr.min.js"></script>
-	<script type="text/javascript" src="js/isotope.js"></script>
-	<script type="text/javascript" src="js/html5lightbox.js"></script>
-	<script type="text/javascript" src="js/wow.js"></script>
+<!-- Including Jquery Js File -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Including Bootstrap js file -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/flatpickr.min.js"></script>
+<script type="text/javascript" src="js/isotope.js"></script>
+<script type="text/javascript" src="js/html5lightbox.js"></script>
+<script type="text/javascript" src="js/wow.js"></script>
 
-	<!-- Custom Js file -->
-	<script type="text/javascript" src="js/script.js"></script>
+<!-- Custom Js file -->
+<script type="text/javascript" src="js/script.js"></script>
 
 
 </body>
