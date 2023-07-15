@@ -70,7 +70,7 @@ if (isset($_GET['search'])) {
 							<nav>
 								<ul>
 									<li class="active menu-item-has-children"><a href="index.php" title=""><i
-												class="fa-brands fa-joomla"></i>Home</a></li>
+												class="fa-solid fa-home"></i>Home</a></li>
 									<li><a href="about.php" title="">About Us</a></li>
 									<li><a href="term.php" title="">Amenities </a></li>
 									<li><a href="contact.php" title="">Contact Us</a></li>
@@ -89,7 +89,7 @@ if (isset($_GET['search'])) {
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="home-detial">
+							<div class="home-detail">
 								<div class="home-banner">
 									<div class="block">
 
@@ -413,41 +413,6 @@ if (isset($_GET['search'])) {
 		</div>
 	</section>
 
-	<section>
-		<div class="pd-btm-less">
-			<div class="container">
-				<div class="partners-logo">
-
-				</div><!--partners-logo end-->
-			</div>
-		</div>
-	</section>
-
-
-
-
-
-	<section>
-		<div class="block no-padding">
-			<div class="newsletter">
-				<div class="bg bg2">
-					<div class="container">
-						<div class="stay-tuned">
-							<h2>Stay tuned with us</h2>
-							<h5>Get our updated offers, discounts, events and much more!</h5>
-						</div>
-						<div class="email-form">
-							<form>
-								<input name="" placeholder="Enter your email address" type="text">
-								<button type="submit">Subscribe</button>
-							</form>
-						</div><!--email-form end-->
-					</div>
-				</div>
-			</div><!--newsletter end-->
-		</div>
-	</section>
-
 	<footer>
 		<div class="block no-padding">
 			<div class="bg bg3">
@@ -458,13 +423,15 @@ if (isset($_GET['search'])) {
 								<div class="widget">
 									<div class="about-widget">
 										<a href="#" title=""><img src="images/icon logo.jpg" alt=""></a>
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-											nonummy nibh euismod it tincidunt ut laoreet commodo consequat. </p>
+										<p>Please be advised that Villa Diwata Resorts is not a real establishment, and any
+											resemblance to such is purely coincidental. It is invented in place of a
+											client to fulfill a requirement in the website designer's requirement in
+											Operating Systems. </p>
 
 										<ul class="sc-links">
-											<li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-											<li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-											<li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
+											<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
+											<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
+											<li><a href="#" title=""><i class="fa-brands fa-google-plus"></i></a></li>
 
 										</ul>
 									</div><!--about-widget end-->
@@ -472,89 +439,24 @@ if (isset($_GET['search'])) {
 							</div>
 							<div class="col-md-3">
 								<div class="widget">
-									<div class="news-widget">
-										<h3 class="widget-title">Latest Rooms</h3>
-										<div class="news">
-											<img src="images/resources/sroom1.png" alt="">
-											<div class="news-details">
-												<h3><a href="#" title="">Single Room</a></h3>
-												<span>$85 night</span>
-											</div>
-										</div><!--news end-->
-										<div class="news">
-											<img src="images/resources/sroom2.png" alt="">
-											<div class="news-details">
-												<h3><a href="#" title="">Luxury Room</a></h3>
-												<span>$352 night</span>
-											</div>
-										</div><!--news end-->
-										<div class="news">
-											<img src="images/resources/sroom3.png" alt="">
-											<div class="news-details">
-												<h3><a href="#" title="">Double Room </a></h3>
-												<span>$125 night</span>
-											</div>
-										</div><!--news end-->
-									</div><!--news-widget end-->
+
 								</div><!--widget end-->
 							</div>
 							<div class="col-md-3">
 								<div class="widget">
-									<div class="widget-quick-links">
-										<h3 class="widget-title">Quick Links</h3>
-										<div class="qk-links">
-											<ul>
-												<li><a href="#" title="">Home</a></li>
-												<li><a href="#" title="">About Us</a></li>
-												<li><a href="#" title="">Suits</a></li>
-												<li><a href="#" title="">News</a></li>
-												<li><a href="#" title="">Contact Us</a></li>
-												<li><a href="#" title="">Bookisnt</a></li>
-												<li><a href="#" title="">Blogs</a></li>
-											</ul>
-											<ul>
-												<li><a href="#" title="">Activities</a></li>
-												<li><a href="#" title="">Gallery</a></li>
-												<li><a href="#" title="">Aminities</a></li>
-												<li><a href="#" title="">Single Room</a></li>
-												<li><a href="#" title="">Testimonials</a></li>
-												<li><a href="#" title="">Dinning</a></li>
-												<li><a href="#" title="">Offers</a></li>
-											</ul>
-										</div>
-									</div><!--widget-quick-links end-->
 								</div><!--widget-end-->
 							</div>
 							<div class="col-md-2 lst">
-								<div class="widget">
-									<div class="widget-tags">
-										<h3 class="widget-title">Tags</h3>
-										<ul>
-											<li><a href="#" title="">Booking</a></li>
-											<li><a href="#" title="">TV</a></li>
-											<li><a href="#" title="">Services</a></li>
-											<li><a href="#" title="">Room</a></li>
-											<li><a href="#" title="">Hostel</a></li>
-											<li><a href="#" title="">WIFI</a></li>
-											<li><a href="#" title="">AC</a></li>
-											<li><a href="#" title="">Camera</a></li>
-											<li><a href="#" title="">Party</a></li>
-											<li><a href="#" title="">Pool</a></li>
-											<li><a href="#" title="">PHP</a></li>
-											<li><a href="#" title="">Offers</a></li>
-											<li><a href="#" title="">Khignt</a></li>
-										</ul>
-									</div><!--widget-tags end-->
-								</div><!--widget end-->
+
 							</div>
 						</div>
 					</div><!--top-footer end-->
 					<div class="bottom-footer">
 						<div class="copyright">
-							<p>THANKYOU EVERYONE</p>
+							<p>THANK YOU EVERYONE</p>
 						</div><!--copyright end-->
 						<div class="credit">
-							<p>Project of: <a href="#" title>Ariel Nazareno, Christian Almazan, LLoyd Hontiveros</a>
+							<p>Project of: <a href="#" title>Ariel Nazareno, Christian Almazan, Lloyd Hontiveros</a>
 							</p>
 						</div><!--credit end-->
 					</div><!--bottom-footer end-->
