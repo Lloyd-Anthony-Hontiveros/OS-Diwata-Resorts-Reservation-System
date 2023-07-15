@@ -164,7 +164,8 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
                         <div class="modal-body">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-8 m-auto">
+                                    <!-- Left Side Modal for the Actual Reservation Form -->
+                                    <div class="col-4 m-auto">
                                         <div class="mb-3">
                                             <label for="dateInput" class="col-form-label">Date:</label>
                                             <input type="date" class="form-control" id="dateInput">
@@ -200,8 +201,11 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
                                         </div>
                                         <div class="mb-3">
                                             <input type="text" class="form-control-plaintext fw-bold" id="total-price" value="Total Price: 0">
-
                                         </div>
+                                    </div>
+                                    <!-- Right Side Modal for Details of Amenities and Addons -->
+                                    <div class="col-8 m-auto">
+                                        <img src="" alt="">
                                     </div>
                                 </div>
                             </div>
