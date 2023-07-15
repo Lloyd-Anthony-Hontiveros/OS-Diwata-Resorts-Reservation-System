@@ -17,8 +17,6 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-
-
 	<link rel="stylesheet" type="text/css" href="css/popup.php">
 </head>
 
@@ -43,8 +41,7 @@
 							<li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
 
 						</ul>
-
-					</div><!--socail-links end-->
+					</div><!--social-links end-->
 				</div>
 			</div><!--top-bar end-->
 			<div class="bottom-header">
@@ -59,7 +56,7 @@
 							<nav>
 								<ul>
 									<li class="active menu-item-has-children"><a href="index.php" title=""><i
-												class="fa fa-joomla"></i>Home</a>
+												class="fa-solid fa-home"></i>Home</a>
 
 									</li>
 
