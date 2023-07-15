@@ -35,19 +35,19 @@
 				<div class="container">
 					<div class="con-links">
 						<ul>
-							<li><i class="fa fa-phone" aria-hidden="true"></i> (+63)9636342280</li>
-							<li><i class="fa fa-envelope" aria-hidden="true"></i>ACL@gmail.com</li>
+							<li><i class="fa-solid fa-phone" aria-hidden="true"></i> (+63)9636342280</li>
+							<li><i class="fa-solid fa-envelope" aria-hidden="true"></i>ACL@gmail.com</li>
 						</ul>
 					</div><!--con-links end-->
 					<div class="social-links">
-						<ul class="social-lnks">
-							<li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
+						<ul class="social-links">
+							<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
+							<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
+							<li><a href="#" title=""><i class="fa-brands fa-google-plus"></i></a></li>
 
 						</ul>
 
-					</div><!--socail-links end-->
+					</div><!--social-links end-->
 				</div>
 			</div><!--top-bar end-->
 			<div class="bottom-header">
@@ -61,14 +61,14 @@
 						<div class="menu-search">
 							<nav>
 								<ul>
-									<li class="active menu-item-has-children"><a href="index.php" title=""><i
-												class="fa fa-joomla"></i>Home</a>
+									<li class="menu-item-has-children"><a href="index.php" title=""><i
+												class="fa-solid fa-home"></i>Home</a>
 
 									</li>
 
 									<li><a href="about.php" title="">About Us</a></li>
-									<li><a href="term.php" title="">Terms and Condition</a></li>
-									<li><a href="contact.php" title="">Contact Us</a></li>
+									<li class="active"><a href="amenities.php" title="">Amenities</a></li>
+									<li><a href="reservations.php">Reservations</a></li>
 								</ul>
 							</nav><!--nav end-->
 

@@ -1,7 +1,9 @@
 <?php
 
-  $date = $_GET['Date'];
-  $name = $_GET['Name'];
+  $date = $_POST['Date'];
+  $name = $_POST['Name'];
+  $headcount = $_POST["Head-Count"];
+  $paidprice = (int)$_POST["Total-Price"];
 
   $serverName = "localhost";
   $username = "root";
@@ -16,15 +18,15 @@
   //Check if Duplicate Entries exist
   if (mysqli_num_rows($check) > 0) {
     echo "Date Already Booked";
-    header("location: test OS HTML.php");
+    header("location: test OS HTML testing.php");
     exit();
   }
   else {
     //Insert DATA
-    $sql = "INSERT INTO `booking_status`(`Date`, `Payment Status`, `Booking Client`) VALUES ('$date','Paid','$name')";
+    $sql = "INSERT INTO `booking_status`(`Date`, `Booking Client`, `Head Count`, `Paid Price`) VALUES ('$date', '$name', '$headcount', '$paidprice')";
     $result = mysqli_query($con, $sql);
 
-    header("location: test OS HTML stable.php");
+    header("location: test OS HTML testing.php");
     exit();
   }
 

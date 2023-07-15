@@ -62,7 +62,8 @@
 												class="fa-solid fa-home"></i>Home</a></li>
 									<li><a href="about.php" title="">About Us</a></li>
 									<li><a href="amenities.php" title="">Amenities </a></li>
-									<li><a href="contact.php" title="">Contact Us</a></li>
+									<li><a href="reservations.php">Reservations</a></li>
+
 								</ul>
 							</nav><!--nav end-->
 						</div>

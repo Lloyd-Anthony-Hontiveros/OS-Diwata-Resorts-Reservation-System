@@ -69,12 +69,30 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
 
 ?>
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../Referenced Frameworks/Bootstrap/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../Referenced Frameworks/Font Awesome/css/fontawesome.css">
-    <link rel="stylesheet" type="text/css" href="../Referenced Frameworks/Font Awesome/css/solid.css">
+	<meta charset="UTF-8">
+	<title>Villa Diwata Resort</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Linking Bootstrap css file -->
+	<link rel="stylesheet" type="text/css" href="../Referenced Frameworks/Bootstrap/bootstrap.css">
+	<!-- Linking Main Css file -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/solid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/flatpickr.min.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.php">
+
+	<!-- Linking Font Awesome files -->
+	<link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/fontawesome.css">
+	<link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/solid.css">
+	<link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/brands.css">
 
     <script>
 
@@ -122,15 +140,66 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
 
 
     </script>
+
+
+
 </head>
 
+
 <body>
-    <a href="../ariel test/index.php">
-        <div class=" position-absolute top-0 start-0 m-3">
-            <button class="btn btn-primary">Back to Home</button>
-        </div>
-    </a>
-    <div class="container">
+
+	<div class="wrapper">
+		<header class="abs">
+			<div class="top-bar">
+				<div class="container">
+					<div class="con-links">
+						<ul>
+							<li><i class="fa-solid fa-phone" aria-hidden="true"></i> (+63)9636342280</li>
+							<li><i class="fa-solid fa-envelope" aria-hidden="true"></i> ACL@gmail.com</li>
+						</ul>
+					</div><!--con-links end-->
+					<div class="social-links">
+						<ul class="social-links">
+							<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
+							<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
+							<li><a href="#" title=""><i class="fa-brands fa-google-plus"></i></a></li>
+
+						</ul>
+					</div><!--social-links end-->
+				</div>
+			</div><!--top-bar end-->
+			<div class="bottom-header">
+				<div class="container">
+					<div class="hd">
+						<div class="logo">
+							<a href="#" title="">
+								<img src="images/logo.jpg" alt="" />
+							</a>
+						</div><!--logo end-->
+						<div class="menu-search">
+							<nav>
+								<ul>
+									<li class="menu-item-has-children"><a href="index.php" title=""><i
+												class="fa-solid fa-home"></i>Home</a></li>
+									<li><a href="about.php" title="">About Us</a></li>
+									<li><a href="amenities.php" title="">Amenities</a></li>
+									<li class="active"><a href="reservations.php">Reservations</a></li>
+
+								</ul>
+							</nav><!--nav end-->
+
+						</div><!--menu-search end-->
+						<div class="menu-icon">
+							<span class="first-bar"></span>
+							<span class="second-bar"></span>
+							<span class="third-bar"></span>
+						</div>
+					</div>
+				</div>
+			</div><!--bottom-header end-->
+		</header><!--Header end-->
+    </div>
+    <div class="container m-auto">
         <div class="row">
             <div class="col text-center">
                 <button type="button" class="btn btn-primary" onclick="showPrev(sessionStorage.getItem('monthNumber'))"><-</button><span style="font-size: 32px" id="dateHeader">  <script>document.write(dates[sessionStorage.getItem("monthNumber") - 1] + " 2023")</script>  </span><button type="button" class="btn btn-primary" onclick="showNext(sessionStorage.getItem('monthNumber'))">-></button>
@@ -170,7 +239,6 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
                         <div class="modal-body">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <!-- Left Side Modal for the Actual Reservation Form -->
                                     <div class="col-8 m-auto">
                                         <div class="mb-3">
                                             <label for="dateInput" class="col-form-label">Date:</label>
@@ -206,6 +274,7 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
             document.getElementById("table7").style.display = "";
         </script>
     </div>
+
     <script src="../Referenced Frameworks/Bootstrap/bootstrap.js"></script>
     <script src="../Referenced Frameworks/jquery-3.7.0.min.js"></script>
     <script>
@@ -241,6 +310,69 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
 
 
     </script>
+
+		<footer>
+		<div class="block no-padding">
+			<div class="bg bg3">
+				<div class="container">
+					<div class="top-footer">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="widget">
+									<div class="about-widget">
+										<a href="#" title=""><img src="images/icon logo.jpg" alt=""></a>
+										<p>Please be advised that Villa Diwata Resorts is not a real establishment, and any
+											resemblance to such is purely coincidental. It is invented in place of a
+											client to fulfill a requirement in the website designer's requirement in
+											Operating Systems. </p>
+
+										<ul class="sc-links">
+											<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
+											<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
+											<li><a href="#" title=""><i class="fa-brands fa-google-plus"></i></a></li>
+
+										</ul>
+									</div><!--about-widget end-->
+								</div><!--widget end-->
+							</div>
+							<div class="col-md-3">
+								<div class="widget">
+
+								</div><!--widget end-->
+							</div>
+							<div class="col-md-3">
+								<div class="widget">
+								</div><!--widget-end-->
+							</div>
+							<div class="col-md-2 lst">
+
+							</div>
+						</div>
+					</div><!--top-footer end-->
+					<div class="bottom-footer">
+						<div class="copyright">
+							<p>THANK YOU EVERYONE</p>
+						</div><!--copyright end-->
+						<div class="credit">
+							<p>Project of: <a href="#" title>Ariel Nazareno, Christian Almazan, Lloyd Hontiveros</a>
+							</p>
+						</div><!--credit end-->
+					</div><!--bottom-footer end-->
+				</div>
+			</div>
+		</div>
+	</footer><!--footer end-->
+
+	</div><!--wrapper end-->
+
+	<!-- Including Jquery Js File -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- Including Bootstrap js file -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- Custom Js file -->
+	<script type="text/javascript" src="js/script.js"></script>
+
+
 </body>
 
 </html>

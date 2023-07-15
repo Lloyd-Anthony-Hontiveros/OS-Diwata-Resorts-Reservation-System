@@ -1,8 +1,8 @@
 <?php
 session_start();
-//  if (isset($_SESSION["user"])) {
-//     header("Location: almazan/Homepage.php");
-// }
+
+require_once "database.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +13,7 @@ session_start();
     <title>Login Form</title>
     <link rel="stylesheet" href="../Referenced Frameworks/Bootstrap/bootstrap.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/fontawesome.css">
     <link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/solid.css">
 </head>
 <body>
