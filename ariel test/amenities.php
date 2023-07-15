@@ -16,9 +16,12 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-
-
 	<link rel="stylesheet" type="text/css" href="css/popup.php">
+
+	<!-- Linking Font Awesome files -->
+	<link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/fontawesome.css">
+	<link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/solid.css">
+	<link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/brands.css">
 </head>
 
 
@@ -229,122 +232,56 @@
 
 
 		<footer>
-			<div class="block no-padding">
-				<div class="bg bg3">
-					<div class="container">
-						<div class="top-footer">
-							<div class="row">
-								<div class="col-md-4">
-									<div class="widget">
-										<div class="about-widget">
-											<a href="#" title=""><img src="images/icon logo.jpg" alt=""></a>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-												nonummy nibh euismod it tincidunt ut laoreet commodo consequat. </p>
+		<div class="block no-padding">
+			<div class="bg bg3">
+				<div class="container">
+					<div class="top-footer">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="widget">
+									<div class="about-widget">
+										<a href="#" title=""><img src="images/icon logo.jpg" alt=""></a>
+										<p>Please be advised that Villa Diwata Resorts is not a real establishment, and any
+											resemblance to such is purely coincidental. It is invented in place of a
+											client to fulfill a requirement in the website designer's requirement in
+											Operating Systems. </p>
 
-											<ul class="sc-links">
-												<li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-												<li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-												<li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
+										<ul class="sc-links">
+											<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
+											<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
+											<li><a href="#" title=""><i class="fa-brands fa-google-plus"></i></a></li>
 
-											</ul>
-										</div><!--about-widget end-->
-									</div><!--widget end-->
-								</div>
-								<div class="col-md-3">
-									<div class="widget">
-										<div class="news-widget">
-											<h3 class="widget-title">Latest Rooms</h3>
-											<div class="news">
-												<img src="images/resources/sroom1.png" alt="">
-												<div class="news-details">
-													<h3><a href="#" title="">Single Room</a></h3>
-													<span>$85 night</span>
-												</div>
-											</div><!--news end-->
-											<div class="news">
-												<img src="images/resources/sroom2.png" alt="">
-												<div class="news-details">
-													<h3><a href="#" title="">Luxury Room</a></h3>
-													<span>$352 night</span>
-												</div>
-											</div><!--news end-->
-											<div class="news">
-												<img src="images/resources/sroom3.png" alt="">
-												<div class="news-details">
-													<h3><a href="#" title="">Double Room </a></h3>
-													<span>$125 night</span>
-												</div>
-											</div><!--news end-->
-										</div><!--news-widget end-->
-									</div><!--widget end-->
-								</div>
-								<div class="col-md-3">
-									<div class="widget">
-										<div class="widget-quick-links">
-											<h3 class="widget-title">Quick Links</h3>
-											<div class="qk-links">
-												<ul>
-													<li><a href="#" title="">Home</a></li>
-													<li><a href="#" title="">About Us</a></li>
-													<li><a href="#" title="">Suits</a></li>
-													<li><a href="#" title="">News</a></li>
-													<li><a href="#" title="">Contact Us</a></li>
-													<li><a href="#" title="">Bookisnt</a></li>
-													<li><a href="#" title="">Blogs</a></li>
-												</ul>
-												<ul>
-													<li><a href="#" title="">Activities</a></li>
-													<li><a href="#" title="">Gallery</a></li>
-													<li><a href="#" title="">Aminities</a></li>
-													<li><a href="#" title="">Single Room</a></li>
-													<li><a href="#" title="">Testimonials</a></li>
-													<li><a href="#" title="">Dinning</a></li>
-													<li><a href="#" title="">Offers</a></li>
-												</ul>
-											</div>
-										</div><!--widget-quick-links end-->
-									</div><!--widget-end-->
-								</div>
-								<div class="col-md-2 lst">
-									<div class="widget">
-										<div class="widget-tags">
-											<h3 class="widget-title">Tags</h3>
-											<ul>
-												<li><a href="#" title="">Booking</a></li>
-												<li><a href="#" title="">TV</a></li>
-												<li><a href="#" title="">Services</a></li>
-												<li><a href="#" title="">Room</a></li>
-												<li><a href="#" title="">Hostel</a></li>
-												<li><a href="#" title="">WIFI</a></li>
-												<li><a href="#" title="">AC</a></li>
-												<li><a href="#" title="">Camera</a></li>
-												<li><a href="#" title="">Party</a></li>
-												<li><a href="#" title="">Pool</a></li>
-												<li><a href="#" title="">PHP</a></li>
-												<li><a href="#" title="">Offers</a></li>
-												<li><a href="#" title="">Khignt</a></li>
-											</ul>
-										</div><!--widget-tags end-->
-									</div><!--widget end-->
-								</div>
+										</ul>
+									</div><!--about-widget end-->
+								</div><!--widget end-->
 							</div>
-						</div><!--top-footer end-->
-						<div class="bottom-footer">
-							<div class="copyright">
-								<p>THANKYOU EVERYONE</p>
-							</div><!--copyright end-->
-							<div class="credit">
-								<p>Project of : <a href="#" title>Ariel Nazareno, Christian Almazan, LLoyd
-										Hontiveros</a></p>
-							</div><!--credit end-->
-						</div><!--bottom-footer end-->
-					</div>
+							<div class="col-md-3">
+								<div class="widget">
+
+								</div><!--widget end-->
+							</div>
+							<div class="col-md-3">
+								<div class="widget">
+								</div><!--widget-end-->
+							</div>
+							<div class="col-md-2 lst">
+
+							</div>
+						</div>
+					</div><!--top-footer end-->
+					<div class="bottom-footer">
+						<div class="copyright">
+							<p>THANK YOU EVERYONE</p>
+						</div><!--copyright end-->
+						<div class="credit">
+							<p>Project of: <a href="#" title>Ariel Nazareno, Christian Almazan, Lloyd Hontiveros</a>
+							</p>
+						</div><!--credit end-->
+					</div><!--bottom-footer end-->
 				</div>
 			</div>
-		</footer><!--footer end-->
-
-
-
+		</div>
+	</footer><!--footer end-->
 
 
 	</div><!--wrapper end-->

@@ -1,14 +1,3 @@
-<?php
-if (isset($_GET['search'])) {
-	header("location:search.php");
-}
-
-
-?>
-
-
-
-
 <!DOCTYPE html>
 <html>
 
@@ -19,15 +8,15 @@ if (isset($_GET['search'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Linking Bootstrap css file -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<!-- Linking Main Css file -->
+	<!-- Linking Main Css files -->
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/flatpickr.min.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 
+	<!-- Linking Font Awesome files -->
 	<link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/fontawesome.css">
 	<link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/solid.css">
 	<link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/brands.css">
@@ -48,7 +37,7 @@ if (isset($_GET['search'])) {
 						</ul>
 					</div><!--con-links end-->
 					<div class="social-links">
-						<ul class="social-lnks">
+						<ul class="social-links">
 							<li><a href="#" title=""><i class="fa-solid fa-facebook"></i></a></li>
 							<li><a href="#" title=""><i class="fa-solid fa-twitter"></i></a></li>
 							<li><a href="#" title=""><i class="fa-solid fa-google-plus"></i></a></li>
@@ -72,7 +61,7 @@ if (isset($_GET['search'])) {
 									<li class="active menu-item-has-children"><a href="index.php" title=""><i
 												class="fa-solid fa-home"></i>Home</a></li>
 									<li><a href="about.php" title="">About Us</a></li>
-									<li><a href="term.php" title="">Amenities </a></li>
+									<li><a href="amenities.php" title="">Amenities </a></li>
 									<li><a href="contact.php" title="">Contact Us</a></li>
 								</ul>
 							</nav><!--nav end-->
