@@ -3,8 +3,7 @@
 require_once 'test OS HTML MonthStuff.php';
 require_once 'database.php';
 
-function isDatePast($givenDate)
-{
+function isDatePast($givenDate) {
     $currentDate = new DateTime();
     $currentDate->setTime(0, 0, 0); // Set time to midnight
 
@@ -16,8 +15,7 @@ function isDatePast($givenDate)
 
 
 //Check if the date is found within the Reservation database. Displays Red "Booked" Box if true, Green "Available" Box if false
-function checkStatus($date)
-{
+function checkStatus($date) {
     global $con;
 
     error_reporting(0);
@@ -26,9 +24,11 @@ function checkStatus($date)
     $row = $result->fetch_assoc();
     if (isDatePast($date)) {
         return "<div class='d-flex justify-content-center align-items-center' style='width: 100px; height: 70px; background-color: orange; margin: 20px'>Unavailable</div>";
-    } else if (strtolower($row["Payment Status"]) === "paid") {
+    }
+    else if (strtolower($row["Payment Status"]) === "paid") {
         return "<div class='d-flex justify-content-center align-items-center' style='width: 100px; height: 70px; background-color: red; margin: 20px'>Booked</div>";
-    } else {
+    }
+    else {
         // $link = "test OS HTML Entry.php?date=" . urlencode($date); // Generate link with the date parameter
         // return "<a href='$link'><div class='d-flex justify-content-center align-items-center text-light' style='width: 100px; height: 70px; background-color: green; margin: 20px'>Available</div></a>";
         $clickedDate = urlencode($date);
@@ -37,8 +37,7 @@ function checkStatus($date)
 }
 
 
-function generateCalendarDates($startDay, $numDays, $monthNumber)
-{
+function generateCalendarDates($startDay, $numDays, $monthNumber) {
     $html = '';
     $currentDay = 1;
     $skipDays = $startDay - 1; // Number of days to skip at the beginning
@@ -54,7 +53,7 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
             } elseif ($currentDay > $numDays) {
                 $html .= "<div class='col text-center'></div>";
             } else {
-                $date = date('Y-m-d', strtotime("2023-" . $monthNumber . "-$currentDay")); // Date Formatting for SQL
+                $date = date('Y-m-d', strtotime("2023-".$monthNumber."-$currentDay")); // Date Formatting for SQL
                 $status = checkStatus($date); // SQL Query in checkStatus
                 $html .= "<div class='col text-center'><span class='date'>$currentDay</span><span>$status</span></div>";
                 $currentDay++;
@@ -72,69 +71,68 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" type="text/css" href="../Referenced Frameworks/Bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../Referenced Frameworks/Font Awesome/css/solid.css">
 
     <script>
 
-        //Shameful Date Array
-        const dates = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+    //Shameful Date Array
+    const dates = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 
-        //Show Previous Month in the Calendar
-        function showPrev(stringMonth) {
-            monthNumber = parseInt(stringMonth);
-            var prevMonthNumber = monthNumber - 1;
-            if (prevMonthNumber < 1) {
-                prevMonthNumber = 12;
-            }
-            document.getElementById("dateHeader").innerHTML = dates[prevMonthNumber - 1] + " 2023";
+    //Show Previous Month in the Calendar
+    function showPrev(stringMonth) {
+        monthNumber = parseInt(stringMonth);
+        var prevMonthNumber = monthNumber - 1;
+        if (prevMonthNumber < 1) {
+            prevMonthNumber = 12;
+        }
+        document.getElementById("dateHeader").innerHTML = dates[prevMonthNumber - 1] + " 2023";
 
-            var tables = document.getElementsByClassName("calendar-table");
-            for (var i = 0; i < tables.length; i++) {
-                tables[i].style.display = 'none';
-            }
-
-            document.getElementById("table" + prevMonthNumber).style.display = '';
-            sessionStorage.setItem("monthNumber", prevMonthNumber);
+        var tables = document.getElementsByClassName("calendar-table");
+        for (var i = 0; i < tables.length; i++) {
+        tables[i].style.display = 'none';
         }
 
-        //Show Next Month in the Calendar
-        function showNext(stringMonth) {
-            monthNumber = parseInt(stringMonth);
-            var nextMonthNumber = monthNumber + 1;
-            if (nextMonthNumber > 12) {
-                nextMonthNumber = 1;
-            }
-            document.getElementById("dateHeader").innerHTML = dates[nextMonthNumber - 1] + " 2023";
+        document.getElementById("table" + prevMonthNumber).style.display = '';
+        sessionStorage.setItem("monthNumber", prevMonthNumber);
+    }
 
-            var tables = document.getElementsByClassName("calendar-table");
-            for (var i = 0; i < tables.length; i++) {
-                tables[i].style.display = 'none';
-            }
+    //Show Next Month in the Calendar
+    function showNext(stringMonth) {
+        monthNumber = parseInt(stringMonth);
+        var nextMonthNumber = monthNumber + 1;
+        if (nextMonthNumber > 12) {
+            nextMonthNumber = 1;
+        }
+        document.getElementById("dateHeader").innerHTML = dates[nextMonthNumber - 1] + " 2023";
 
-            document.getElementById("table" + nextMonthNumber).style.display = '';
-            sessionStorage.setItem("monthNumber", nextMonthNumber);
+        var tables = document.getElementsByClassName("calendar-table");
+        for (var i = 0; i < tables.length; i++) {
+        tables[i].style.display = 'none';
         }
 
-        //Sets Initial Date Month (July)
-        sessionStorage.setItem("monthNumber", "7");
+        document.getElementById("table" + nextMonthNumber).style.display = '';
+        sessionStorage.setItem("monthNumber", nextMonthNumber);
+    }
+
+    //Sets Initial Date Month (July)
+    sessionStorage.setItem("monthNumber", "7");
 
 
     </script>
 </head>
 
 <body>
+    <a href="../ariel test/index.php">
+        <div class=" position-absolute top-0 start-0 m-3">
+            <button class="btn btn-primary">Back to Home</button>
+        </div>
+    </a>
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <button type="button" class="btn btn-primary"
-                    onclick="showPrev(sessionStorage.getItem('monthNumber'))"><-< /button><span style="font-size: 32px"
-                            id="dateHeader">
-                            <script>document.write(dates[sessionStorage.getItem("monthNumber") - 1] + " 2023")</script>
-                        </span><button type="button" class="btn btn-primary"
-                            onclick="showNext(sessionStorage.getItem('monthNumber'))">-></button>
+                <button type="button" class="btn btn-primary" onclick="showPrev(sessionStorage.getItem('monthNumber'))"><-</button><span style="font-size: 32px" id="dateHeader">  <script>document.write(dates[sessionStorage.getItem("monthNumber") - 1] + " 2023")</script>  </span><button type="button" class="btn btn-primary" onclick="showNext(sessionStorage.getItem('monthNumber'))">-></button>
             </div>
         </div>
         <div class="row">
@@ -161,7 +159,7 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
         <?php echo generateCalendarDates($Dec->startDay, $Dec->endDay, $Dec->monthNumber); ?>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
                     <form action="test OS Reserver.php" method="GET">
                         <div class="modal-header">
@@ -171,7 +169,7 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
                         <div class="modal-body">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <!-- Left Side Modal for Actual Reservation Form -->
+                                    <!-- Left Side Modal for the Actual Reservation Form -->
                                     <div class="col-8 m-auto">
                                         <div class="mb-3">
                                             <label for="dateInput" class="col-form-label">Date:</label>
@@ -182,59 +180,21 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
                                             <input type="text" class="form-control" id="name">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="amenities-group" class="col-form-label">Addons: </label>
-                                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                                            <br>
-                                            <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
-
-                                            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                                            <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
-
-                                            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                                            <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
-                                            <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
-                                            <label class="btn btn-outline-primary" for="btncheck4">Checkbox 4</label>
-
-                                            <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
-                                            <label class="btn btn-outline-primary" for="btncheck5">Checkbox 5</label>
-
-                                            <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
-                                            <label class="btn btn-outline-primary" for="btncheck6">Checkbox 6</label>
+                                            <label for="head-count" class="col-form-label">Price per Person: &#8369;500</label>
+                                            <label for="head-count" class="col-form-label">Number of People: </label>
+                                            <input type="number" name="head-count" id="head-count" min="1" max="10">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="head-count" class="col-form-label">Price per Person:
-                                                &#8369;500</label>
-                                            <label for="head-count" class="col-form-label">Number of People (Max 10 People): </label>
-                                            <input type="number" name="head-count" id="head-count" min="1" max="10" maxlength="3">
-                                            <div class='alert alert-danger' style="display: none" id="headCountAlert">Invalid Headcount. Please Pick a Number between 1 and 10.</div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control-plaintext fw-bold" id="total-price"
-                                                value="Total Price: 0">
+                                            <input type="text" class="form-control-plaintext fw-bold" id="total-price" value="Total Price: 0">
                                         </div>
                                     </div>
-                                    <!-- Right Side Modal for Details Stuff of Amenities and Addons -->
-                                    <!-- <div class="col-8 m-auto">
-                                        <img src=" Images/40k saint celestine.jpg" alt="40k Saint Celestine"
-                                            class="img-fluid" id="modalImageID" style="height: 250px; width: 100%">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Semper risus in
-                                            hendrerit gravida rutrum. Nisl pretium fusce id velit ut tortor pretium
-                                            viverra. Condimentum id venenatis a condimentum. Nec feugiat nisl pretium
-                                            fusce.
-                                        </p>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i
-                                    class="fa-solid fa-xmark"></i> Close</button>
-                            <button type="button" class="btn btn-danger" onclick="clearForm()"><i
-                                    class="fa-solid fa-xmark"></i> Clear</button>
-                            <input type="submit" class="btn btn-primary" value="Reserve"><i
-                                class="fa-solid fa-check"></i></input>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i> Close</button>
+                            <button type="button" class="btn btn-danger" onclick="clearForm()"><i class="fa-solid fa-xmark"></i> Clear</button>
+                            <input type="submit" class="btn btn-primary" value="Reserve"><i class="fa-solid fa-check"></i></input>
                         </div>
                     </form>
                 </div>
@@ -251,35 +211,30 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
 
         //Clear Function
         function clearForm() {
-            document.getElementById("dateInput").value = ""; // Clear the Date input field
-            document.getElementById("head-count").value = ""; // Clear the Name input field
+        document.getElementById("dateInput").value = ""; // Clear the Date input field
+        document.getElementById("head-count").value = ""; // Clear the Name input field
         }
 
         //Modal Overlay Script
         const exampleModal = document.getElementById('exampleModal')
         if (exampleModal) {
             exampleModal.addEventListener('show.bs.modal', event => {
-                // Button that triggered the modal
-                const button = event.relatedTarget
-                // Extract info from data-bs-* attributes
-                const recipient = button.getAttribute('data-bs-date')
+            // Button that triggered the modal
+            const button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            const recipient = button.getAttribute('data-bs-date')
 
-                // Update the modal's content.
-                const modalBodyInput = exampleModal.querySelector('.modal-body input')
-                modalBodyInput.value = recipient
+            // Update the modal's content.
+            const modalBodyInput = exampleModal.querySelector('.modal-body input')
+            modalBodyInput.value = recipient
             })
         }
 
         //Detect Changes in Input and Update Price in Real Time
-        $(document).ready(function () {
-            $("#head-count").on('input', function () {
+        $(document).ready(function() {
+            $("#head-count").on('input', function() {
                 var headcount = document.getElementById("head-count").value;
-                if (headcount > 0 && headcount < 11) {
-                    document.getElementById("total-price").value = "Total Price: " + (headcount * 500);
-                }
-                else {
-                    document.getElementById("headCountAlert").display = "";
-                }
+                document.getElementById("total-price").value = "Total Price: " + (headcount * 500);
             });
         });
 
