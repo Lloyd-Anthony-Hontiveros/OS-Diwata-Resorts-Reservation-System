@@ -78,7 +78,7 @@
 			<div class="block">
 				<div class="container">
 					<div class="term-one">
-						<h3 class="term-title">What is this 'Lorem Ipsum' or 'Lorum Ipsum' stuff?</h3>
+						<h3 class="term-title">Amenities</h3>
 						<p>In publishing and graphic design, placeholder text is commonly used to demonstrate the
 							elements of a document or visual presentation, such as font, typography, and layout. Even
 							though using "lorem ipsum" often arouses curiosity because of its resemblance to classical
@@ -91,14 +91,14 @@
 						<div class="tm-conditions">
 							<div class="col-md-6">
 								<div class="tmc-one">
-									<h3 class="term-title">Use of cookies</h3>
+									<h3 class="term-title">Lodgings</h3>
 									<p>Customization: Most generators only output paragraphs of about the same length.
 										Sometimes you need lists, headings, long paragraphs, short paragraphs, etc. The
 										website/magazine that you're designing probably isn't going to be filled with
 										uniform paragraphs, so your placeholder text should reflect that.</p>
 								</div><!--tmc-one end-->
 								<div class="tmc-one">
-									<h3 class="term-title">You ask, we answer!</h3>
+									<h3 class="term-title">Sound Systems and Other Equipment</h3>
 									<div class="condi">
 										<span>General / Owenrship</span>
 										<p>Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Nemo
@@ -133,7 +133,7 @@
 							</div>
 							<div class="col-md-6">
 								<div class="tmc-one">
-									<h3 class="term-title">Use of this Site</h3>
+									<h3 class="term-title">Rules and Regulations while residing in the Resort</h3>
 									<div class="condi">
 										<span>General</span>
 										<p>Septem autem illi non suo, sed populorum suffragio omnium nominati sunt.Duo
@@ -144,13 +144,13 @@
 											sane; Quae quo sunt excelsiores, eo dant clariora indicia naturae.</p>
 									</div><!--condi end-->
 									<div class="condi">
-										<span>Accounts / Passwords</span>
+										<span>Cleanliness</span>
 										<p>Hoc non est positum in nostra actione. Atque his de rebus et splendida eorum
 											et illustris oratio. Igitur neque stultorum quisquam beatus neque sapientium
 											est non beatus. Quid enim possumus hoc agere divinius. </p>
 									</div><!--condi end-->
 									<div class="condi">
-										<span>Reservations</span>
+										<span>Equipment Handling</span>
 										<p>Memini vero, inquam; Igitur neque stultorum quisquam beatus neque sapientium
 											non beatus. Nihil ad rem! Ne sit sane; Quae quo sunt excelsiores, eo dant
 											clariora indicia naturae. Septem autem illi non suo, sed populorum suffragio
@@ -159,7 +159,7 @@
 											pluribus. Ita graviter et secrevit a bono. </p>
 									</div><!--condi end-->
 									<div class="condi">
-										<span>Noties and procedures for marking claims of copyright infringment</span>
+										<span>Item Policy</span>
 										<p>Cum praesertim illa perdiscere ludus esset. Re mihi aeque satisfacit, et
 											quidem locis pluribus. Ita graviter et secrevit a bono. Memini vero, inquam;
 											Igitur neque stultorum quisquam beatus neque sapientium non beatus. Nihil ad

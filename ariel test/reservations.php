@@ -82,9 +82,9 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
     <!-- Linking Bootstrap css file -->
     <link rel="stylesheet" type="text/css" href="../Referenced Frameworks/Bootstrap/bootstrap.css">
     <!-- Linking Main Css file -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/animate.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/flatpickr.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/owl.carousel.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/color.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
@@ -186,12 +186,12 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
         </header><!--Header end-->
 
         <div class="about-bg" style="height: 130px;">
-			<div class="container">
-				<div class="rl-banner"></br>
+            <div class="container">
+                <div class="rl-banner"></br>
 
-				</div>
-			</div>
-		</div>
+                </div>
+            </div>
+        </div>
 
         <div class="container" style="margin-top: 160px">
             <div class="row">
@@ -227,42 +227,6 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
             <?php echo generateCalendarDates($Nov->startDay, $Nov->endDay, $Nov->monthNumber); ?>
             <?php echo generateCalendarDates($Dec->startDay, $Dec->endDay, $Dec->monthNumber); ?>
 
-            <script src="../Referenced Frameworks/Bootstrap/bootstrap.js"></script>
-            <script src="../Referenced Frameworks/jquery-3.7.0.min.js"></script>
-            <script>
-
-                //Clear Function
-                function clearForm() {
-                    document.getElementById("dateInput").value = ""; // Clear the Date input field
-                    document.getElementById("name").value = "";
-                    document.getElementById("head-count").value = ""; // Clear the Name input field
-                }
-
-                //Modal Overlay Script
-                const exampleModal = document.getElementById('exampleModal')
-                if (exampleModal) {
-                    exampleModal.addEventListener('show.bs.modal', event => {
-                        // Button that triggered the modal
-                        const button = event.relatedTarget
-                        // Extract info from data-bs-* attributes
-                        const recipient = button.getAttribute('data-bs-date')
-
-                        // Update the modal's content.
-                        const modalBodyInput = exampleModal.querySelector('.modal-body input')
-                        modalBodyInput.value = recipient
-                    })
-                }
-
-                //Detect Changes in Input and Update Price in Real Time
-                $(document).ready(function () {
-                    $("#head-count").on('input', function () {
-                        var headcount = document.getElementById("head-count").value;
-                        document.getElementById("total-price").value = (headcount * 500);
-                    });
-                });
-
-            </script>
-
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -290,7 +254,7 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
                                                     &#8369;500</label>
                                                 <label for="head-count" class="col-form-label">Number of People:
                                                 </label>
-                                                <input type="number" name="Head-Count" id="head-count" min="1" max="10"
+                                                <input type="number" name="Head-Count" id="head-count" min="1" max="30"
                                                     required>
                                             </div>
                                             <div class="mb-3">
@@ -377,7 +341,41 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
 
     </div><!--wrapper end-->
 
+    <script src="../Referenced Frameworks/Bootstrap/bootstrap.js"></script>
+    <script src="../Referenced Frameworks/jquery-3.7.0.min.js"></script>
+    <script>
 
+        //Clear Function
+        function clearForm() {
+            document.getElementById("dateInput").value = ""; // Clear the Date input field
+            document.getElementById("name").value = "";
+            document.getElementById("head-count").value = ""; // Clear the Name input field
+        }
+
+        //Modal Overlay Script
+        const exampleModal = document.getElementById('exampleModal')
+        if (exampleModal) {
+            exampleModal.addEventListener('show.bs.modal', event => {
+                // Button that triggered the modal
+                const button = event.relatedTarget
+                // Extract info from data-bs-* attributes
+                const recipient = button.getAttribute('data-bs-date')
+
+                // Update the modal's content.
+                const modalBodyInput = exampleModal.querySelector('.modal-body input')
+                modalBodyInput.value = recipient
+            })
+        }
+
+        //Detect Changes in Input and Update Price in Real Time
+        $(document).ready(function () {
+            $("#head-count").on('input', function () {
+                var headcount = document.getElementById("head-count").value;
+                document.getElementById("total-price").value = (headcount * 500);
+            });
+        });
+
+    </script>
     <!-- Custom Js file -->
     <script type="text/javascript" src="js/script.js"></script>
 

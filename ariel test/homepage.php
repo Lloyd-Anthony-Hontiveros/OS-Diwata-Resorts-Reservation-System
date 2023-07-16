@@ -93,7 +93,7 @@
 											<i class="fa-solid fa-television"></i>
 											<div>
 												<h5>Cable TV</h5>
-												<span>Free Cable TV</span>
+												<span>Free Cable TV in Lodgings</span>
 											</div>
 										</div>
 										<div class="service-block">
@@ -149,14 +149,13 @@
 									<div class="fav-room">
 										<img src="images/resources/fav-room1.jpg" alt="">
 										<div class="fav-rm-data">
-											<h3><a href="#" title="">Room Type: Family size
-													Aircondition<br>
-													Max Adults: 4<br>
-													Max Children: 4<br>
-													Rate per Night: ₱ 1800</a></h3>
-
-
-
+											<h3>
+												Room Type: Family size
+												Aircondition<br>
+												Max Adults: 4<br>
+												Max Children: 4<br>
+												Rate per Night: ₱ 1800
+											</h3>
 										</div>
 									</div><!--fav-room end-->
 								</div>
@@ -406,7 +405,8 @@
 								<div class="widget">
 									<div class="about-widget">
 										<a href="#" title=""><img src="images/icon logo.jpg" alt=""></a>
-										<p>Please be advised that Villa Diwata Resorts is not a real establishment, and any
+										<p>Please be advised that Villa Diwata Resorts is not a real establishment, and
+											any
 											resemblance to such is purely coincidental. It is invented in place of a
 											client to fulfill a requirement in the website designer's requirement in
 											Operating Systems. </p>
