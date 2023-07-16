@@ -185,6 +185,14 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
             </div><!--bottom-header end-->
         </header><!--Header end-->
 
+        <div class="about-bg" style="height: 130px;">
+			<div class="container">
+				<div class="rl-banner"></br>
+
+				</div>
+			</div>
+		</div>
+
         <div class="container" style="margin-top: 160px">
             <div class="row">
                 <div class="col text-center">
@@ -222,12 +230,6 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
             <script src="../Referenced Frameworks/Bootstrap/bootstrap.js"></script>
             <script src="../Referenced Frameworks/jquery-3.7.0.min.js"></script>
             <script>
-
-                $(document).ready(function () {
-                    var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-                    myModal.show();
-                });
-
 
                 //Clear Function
                 function clearForm() {

@@ -15,6 +15,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
+
 
 	<!-- Linking Font Awesome files -->
 	<link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/fontawesome.css">
@@ -81,24 +83,24 @@
 											<h2>Villa Diwata</h2>
 										</div>
 										<div class="service-block">
-											<i class="fa fa-wifi"></i>
+											<i class="fa-solid fa-wifi"></i>
 											<div>
 												<h5>Free WI-FI</h5>
 												<span>in Villa Resort</span>
 											</div>
 										</div>
 										<div class="service-block">
-											<i class="fa fa-television"></i>
+											<i class="fa-solid fa-television"></i>
 											<div>
 												<h5>Cable TV</h5>
 												<span>Free Cable TV</span>
 											</div>
 										</div>
 										<div class="service-block">
-											<i class="fa fa-coffee"></i>
+											<i class="fa-solid fa-ticket"></i>
 											<div>
-												<h5>Restaurant</h5>
-												<span>Coffee & Resturant</span>
+												<h5>Venue</h5>
+												<span>Venue Space and Sound Systems</span>
 											</div>
 										</div>
 									</div>

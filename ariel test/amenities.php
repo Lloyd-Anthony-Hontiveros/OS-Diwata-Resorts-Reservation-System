@@ -63,11 +63,20 @@
 			</div><!--bottom-header end-->
 		</header><!--Header end-->
 
-
+		<div class="about-bg">
+			<div class="container">
+				<div class="rl-banner"></br>
+					<br>
+					<br>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
 
 		<section>
 			<div class="block">
-				<div class="container nopddd">
+				<div class="container">
 					<div class="term-one">
 						<h3 class="term-title">What is this 'Lorem Ipsum' or 'Lorum Ipsum' stuff?</h3>
 						<p>In publishing and graphic design, placeholder text is commonly used to demonstrate the
