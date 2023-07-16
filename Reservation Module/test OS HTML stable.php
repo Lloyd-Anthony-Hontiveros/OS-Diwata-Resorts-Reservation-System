@@ -14,7 +14,7 @@ function isDatePast($givenDate) {
 }
 
 
-//Check if the date is found within the Reservation database. Displays Red "Booked" Box if true, Green "Available" Box if false
+//Check if the date is found within the Reservation database. Displays Red "Booked" Box if true, Green "Available" Box if false, Orange "Unavailable" if past current date
 function checkStatus($date) {
     global $con;
 
@@ -25,7 +25,7 @@ function checkStatus($date) {
     if (isDatePast($date)) {
         return "<div class='d-flex justify-content-center align-items-center' style='width: 100px; height: 70px; background-color: orange; margin: 20px'>Unavailable</div>";
     }
-    else if (strtolower($row["Payment Status"]) === "paid") {
+    else if ($row) {
         return "<div class='d-flex justify-content-center align-items-center' style='width: 100px; height: 70px; background-color: red; margin: 20px'>Booked</div>";
     }
     else {
@@ -73,6 +73,7 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../Referenced Frameworks/Bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../Referenced Frameworks/Font Awesome/css/fontawesome.css">
     <link rel="stylesheet" type="text/css" href="../Referenced Frameworks/Font Awesome/css/solid.css">
 
     <script>
@@ -161,7 +162,7 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
-                    <form action="test OS Reserver.php" method="GET">
+                    <form action="test OS Reserver.php" method="POST">
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Reservation Entry</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -173,19 +174,19 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
                                     <div class="col-8 m-auto">
                                         <div class="mb-3">
                                             <label for="dateInput" class="col-form-label">Date:</label>
-                                            <input type="date" class="form-control" id="dateInput">
+                                            <input type="date" class="form-control" name="Date" id="dateInput">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="dateInput" class="col-form-label">Name:</label>
-                                            <input type="text" class="form-control" id="name">
+                                            <label for="dateInput" class="col-form-label" required>Name:</label>
+                                            <input type="text" class="form-control" name="Name" id="name">
                                         </div>
                                         <div class="mb-3">
                                             <label for="head-count" class="col-form-label">Price per Person: &#8369;500</label>
                                             <label for="head-count" class="col-form-label">Number of People: </label>
-                                            <input type="number" name="head-count" id="head-count" min="1" max="10">
+                                            <input type="number" name="Head-Count" id="head-count" min="1" max="10" required>
                                         </div>
                                         <div class="mb-3">
-                                            <input type="text" class="form-control-plaintext fw-bold" id="total-price" value="Total Price: 0">
+                                            <span class="fw-bold">Total Price: </span><input type="text" class="form-control-plaintext fw-bold" name="Total-Price" id="total-price" value="0">
                                         </div>
                                     </div>
                                 </div>
@@ -194,7 +195,7 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i> Close</button>
                             <button type="button" class="btn btn-danger" onclick="clearForm()"><i class="fa-solid fa-xmark"></i> Clear</button>
-                            <input type="submit" class="btn btn-primary" value="Reserve"><i class="fa-solid fa-check"></i></input>
+                            <button type="submit" class="btn btn-primary" value="Reserve"><i class="fa-solid fa-check"></i> Reserve</button>
                         </div>
                     </form>
                 </div>
@@ -234,7 +235,7 @@ function generateCalendarDates($startDay, $numDays, $monthNumber) {
         $(document).ready(function() {
             $("#head-count").on('input', function() {
                 var headcount = document.getElementById("head-count").value;
-                document.getElementById("total-price").value = "Total Price: " + (headcount * 500);
+                document.getElementById("total-price").value = (headcount * 500);
             });
         });
 

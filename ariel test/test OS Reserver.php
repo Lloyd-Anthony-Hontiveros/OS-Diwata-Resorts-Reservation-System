@@ -18,7 +18,7 @@
   //Check if Duplicate Entries exist
   if (mysqli_num_rows($check) > 0) {
     echo "Date Already Booked";
-    header("location: test OS HTML testing.php");
+    header("location: reservations.php");
     exit();
   }
   else {
@@ -26,7 +26,7 @@
     $sql = "INSERT INTO `booking_status`(`Date`, `Booking Client`, `Head Count`, `Paid Price`) VALUES ('$date', '$name', '$headcount', '$paidprice')";
     $result = mysqli_query($con, $sql);
 
-    header("location: test OS HTML testing.php");
+    header("location: reservations.php");
     exit();
   }
 
