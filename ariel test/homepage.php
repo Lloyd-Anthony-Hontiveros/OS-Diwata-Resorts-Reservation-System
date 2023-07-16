@@ -36,15 +36,6 @@
 							<li><i class="fa-solid fa-envelope" aria-hidden="true"></i> ACL@gmail.com</li>
 						</ul>
 					</div><!--con-links end-->
-					<div class="social-links">
-						<ul class="social-links">
-							<li><a href="#" title=""><i class="fa-solid fa-facebook"></i></a></li>
-							<li><a href="#" title=""><i class="fa-solid fa-twitter"></i></a></li>
-							<li><a href="#" title=""><i class="fa-solid fa-google-plus"></i></a></li>
-
-						</ul>
-
-					</div><!--socail-links end-->
 				</div>
 			</div><!--top-bar end-->
 			<div class="bottom-header">
@@ -52,13 +43,13 @@
 					<div class="hd">
 						<div class="logo">
 							<a href="#" title="">
-								<center><img src="images/logo.jpg" alt="" /></center>
+								<img src="images/logo.jpg" alt="" />
 							</a>
 						</div><!--logo end-->
 						<div class="menu-search">
 							<nav>
 								<ul>
-									<li class="active menu-item-has-children"><a href="index.php" title=""><i
+									<li class="active menu-item-has-children"><a href="homepage.php" title=""><i
 												class="fa-solid fa-home"></i>Home</a></li>
 									<li><a href="about.php" title="">About Us</a></li>
 									<li><a href="amenities.php" title="">Amenities </a></li>

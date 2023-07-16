@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-	<link rel="stylesheet" type="text/css" href="css/popup.php">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
 
 	<!-- Linking Font Awesome files -->
 	<link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/fontawesome.css">
@@ -28,8 +28,6 @@
 <body>
 
 	<div class="wrapper">
-
-
 		<header class="abs">
 			<div class="top-bar">
 				<div class="container">
@@ -39,15 +37,6 @@
 							<li><i class="fa-solid fa-envelope" aria-hidden="true"></i>ACL@gmail.com</li>
 						</ul>
 					</div><!--con-links end-->
-					<div class="social-links">
-						<ul class="social-links">
-							<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
-							<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
-							<li><a href="#" title=""><i class="fa-brands fa-google-plus"></i></a></li>
-
-						</ul>
-
-					</div><!--social-links end-->
 				</div>
 			</div><!--top-bar end-->
 			<div class="bottom-header">
@@ -61,40 +50,19 @@
 						<div class="menu-search">
 							<nav>
 								<ul>
-									<li class="menu-item-has-children"><a href="index.php" title=""><i
-												class="fa-solid fa-home"></i>Home</a>
-
-									</li>
-
+									<li class="menu-item-has-children"><a href="homepage.php" title=""><i
+												class="fa-solid fa-home"></i>Home</a></li>
 									<li><a href="about.php" title="">About Us</a></li>
 									<li class="active"><a href="amenities.php" title="">Amenities</a></li>
 									<li><a href="reservations.php">Reservations</a></li>
 								</ul>
 							</nav><!--nav end-->
-
-						</div><!--menu-search end-->
-						<div class="menu-icon">
-							<span class="first-bar"></span>
-							<span class="second-bar"></span>
-							<span class="third-bar"></span>
 						</div>
 					</div>
 				</div>
 			</div><!--bottom-header end-->
 		</header><!--Header end-->
 
-
-		<div class="about-bg">
-			<div class="container">
-				<div class="rl-banner">
-					<h2>Terms & Conditions</h2>
-					<ul></br>
-						<li><a href="#">Home</a></li>
-						<li><span class="active">Term & Conditions</span></li>
-					</ul>
-				</div>
-			</div>
-		</div>
 
 
 		<section>
@@ -208,90 +176,67 @@
 
 
 
-		<section>
-			<div class="block no-padding">
-				<div class="newsletter">
-					<div class="bg2">
-						<div class="container">
-							<div class="stay-tuned">
-								<h2>Stay tuned with us</h2>
-								<h5>Get our updated offers, discounts, events and much more!</h5>
-							</div>
-							<div class="email-form">
-								<form>
-									<input name="" placeholder="Enter your email address" type="text">
-									<button type="submit">Subscribe</button>
-								</form>
-							</div><!--email-form end-->
-						</div>
-					</div>
-				</div><!--newsletter end-->
-			</div>
-		</section>
-
-
-
 		<footer>
-		<div class="block no-padding">
-			<div class="bg bg3">
-				<div class="container">
-					<div class="top-footer">
-						<div class="row">
-							<div class="col-md-4">
-								<div class="widget">
-									<div class="about-widget">
-										<a href="#" title=""><img src="images/icon logo.jpg" alt=""></a>
-										<p>Please be advised that Villa Diwata Resorts is not a real establishment, and any
-											resemblance to such is purely coincidental. It is invented in place of a
-											client to fulfill a requirement in the website designer's requirement in
-											Operating Systems. </p>
+			<div class="block no-padding">
+				<div class="bg bg3">
+					<div class="container">
+						<div class="top-footer">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="widget">
+										<div class="about-widget">
+											<a href="#" title=""><img src="images/icon logo.jpg" alt=""></a>
+											<p>Please be advised that Villa Diwata Resorts is not a real establishment,
+												and any
+												resemblance to such is purely coincidental. It is invented in place of a
+												client to fulfill a requirement in the website designer's requirement in
+												Operating Systems. </p>
 
-										<ul class="sc-links">
-											<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
-											<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
-											<li><a href="#" title=""><i class="fa-brands fa-google-plus"></i></a></li>
+											<ul class="sc-links">
+												<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
+												<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
+												<li><a href="#" title=""><i class="fa-brands fa-google-plus"></i></a>
+												</li>
 
-										</ul>
-									</div><!--about-widget end-->
-								</div><!--widget end-->
-							</div>
-							<div class="col-md-3">
-								<div class="widget">
+											</ul>
+										</div><!--about-widget end-->
+									</div><!--widget end-->
+								</div>
+								<div class="col-md-3">
+									<div class="widget">
 
-								</div><!--widget end-->
-							</div>
-							<div class="col-md-3">
-								<div class="widget">
-								</div><!--widget-end-->
-							</div>
-							<div class="col-md-2 lst">
+									</div><!--widget end-->
+								</div>
+								<div class="col-md-3">
+									<div class="widget">
+									</div><!--widget-end-->
+								</div>
+								<div class="col-md-2 lst">
 
+								</div>
 							</div>
-						</div>
-					</div><!--top-footer end-->
-					<div class="bottom-footer">
-						<div class="copyright">
-							<p>THANK YOU EVERYONE</p>
-						</div><!--copyright end-->
-						<div class="credit">
-							<p>Project of: <a href="#" title>Ariel Nazareno, Christian Almazan, Lloyd Hontiveros</a>
-							</p>
-						</div><!--credit end-->
-					</div><!--bottom-footer end-->
+						</div><!--top-footer end-->
+						<div class="bottom-footer">
+							<div class="copyright">
+								<p>THANK YOU EVERYONE</p>
+							</div><!--copyright end-->
+							<div class="credit">
+								<p>Project of: <a href="#" title>Ariel Nazareno, Christian Almazan, Lloyd Hontiveros</a>
+								</p>
+							</div><!--credit end-->
+						</div><!--bottom-footer end-->
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer><!--footer end-->
-
-
+		</footer><!--footer end-->
 	</div><!--wrapper end-->
 
 	<!-- Including Jquery Js File -->
-	<script type="text/javascript" src="http://creativethemes.us/relax/js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<!-- Including Bootstrap js file -->
-	<script type="text/javascript" src="http://creativethemes.us/relax/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<!-- Custom Js file -->
-	<script type="text/javascript" src="http://creativethemes.us/relax/js/script.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 
 
 </body>

@@ -10,14 +10,12 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<!-- Linking Main Css file -->
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/solid.min.css">
 	<link rel="stylesheet" type="text/css" href="css/flatpickr.min.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-	<link rel="stylesheet" type="text/css" href="css/popup.php">
-
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
 	<!-- Linking Font Awesome files -->
 	<link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/fontawesome.css">
 	<link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/solid.css">
@@ -29,7 +27,6 @@
 <body>
 
 	<div class="wrapper">
-
 		<header class="abs">
 			<div class="top-bar">
 				<div class="container">
@@ -39,14 +36,6 @@
 							<li><i class="fa-solid fa-envelope" aria-hidden="true"></i> ACL@gmail.com</li>
 						</ul>
 					</div><!--con-links end-->
-					<div class="social-links">
-						<ul class="social-links">
-							<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
-							<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
-							<li><a href="#" title=""><i class="fa-brands fa-google-plus"></i></a></li>
-
-						</ul>
-					</div><!--social-links end-->
 				</div>
 			</div><!--top-bar end-->
 			<div class="bottom-header">
@@ -60,37 +49,18 @@
 						<div class="menu-search">
 							<nav>
 								<ul>
-									<li class="menu-item-has-children"><a href="index.php" title=""><i
+									<li class="menu-item-has-children"><a href="homepage.php" title=""><i
 												class="fa-solid fa-home"></i>Home</a></li>
 									<li class="active"><a href="about.php" title="">About Us</a></li>
 									<li><a href="amenities.php" title="">Amenities</a></li>
 									<li><a href="reservations.php">Reservations</a></li>
 								</ul>
 							</nav><!--nav end-->
-
-						</div><!--menu-search end-->
-						<div class="menu-icon">
-							<span class="first-bar"></span>
-							<span class="second-bar"></span>
-							<span class="third-bar"></span>
 						</div>
 					</div>
 				</div>
 			</div><!--bottom-header end-->
 		</header><!--Header end-->
-
-
-		<div class="about-bg">
-			<div class="container">
-				<div class="rl-banner"></br>
-					<h2 class="tp">About us</h2>
-					<ul></br>
-						<li><a href="#">Home</a></li>
-						<li><span class="active">About Us</span></li>
-					</ul>
-				</div>
-			</div>
-		</div>
 
 
 
@@ -271,6 +241,11 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<!-- Including Bootstrap js file -->
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/flatpickr.min.js"></script>
+	<script type="text/javascript" src="js/isotope.js"></script>
+	<script type="text/javascript" src="js/html5lightbox.js"></script>
+	<script type="text/javascript" src="js/wow.js"></script>
 	<!-- Custom Js file -->
 	<script type="text/javascript" src="js/script.js"></script>
 
