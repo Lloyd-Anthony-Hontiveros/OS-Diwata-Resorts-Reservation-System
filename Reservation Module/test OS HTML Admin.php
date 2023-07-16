@@ -390,6 +390,7 @@
       </main>
     </div>
   </div>
+
   <script src="dashboard_files/bootstrap.bundle.min.js"></script>
 
   <script src="dashboard_files/dashboard.js"></script>

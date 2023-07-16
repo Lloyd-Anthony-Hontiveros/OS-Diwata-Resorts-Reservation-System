@@ -278,7 +278,7 @@ require_once 'database.php';
   </svg>
 
   <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">Company name</a>
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">Villa Diwata Resorts</a>
 
     <ul class="navbar-nav flex-row d-md-none">
       <li class="nav-item text-nowrap">
@@ -310,7 +310,7 @@ require_once 'database.php';
         <div class="offcanvas-lg offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
           aria-labelledby="sidebarMenuLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="sidebarMenuLabel">Company name</h5>
+            <h5 class="offcanvas-title" id="sidebarMenuLabel">Villa Diwata Resorts</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
               aria-label="Close"></button>
           </div>
@@ -324,39 +324,15 @@ require_once 'database.php';
                   Dashboard
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
-                  <svg class="bi">
-                    <use xlink:href="#file-earmark"></use>
-                  </svg>
-                  Amenities
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
-                  <svg class="bi">
-                    <use xlink:href="#cart"></use>
-                  </svg>
-                  Addons
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
-                  <svg class="bi">
-                    <use xlink:href="#people"></use>
-                  </svg>
-                  Reservations
-                </a>
-              </li>
             </ul>
             <hr class="my-3">
             <ul class="nav flex-column mb-auto">
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <a class="nav-link d-flex align-items-center gap-2" href="homepage.php">
                   <svg class="bi">
                     <use xlink:href="#door-closed"></use>
                   </svg>
-                  Sign out
+                  Back to Homepage
                 </a>
               </li>
             </ul>
@@ -379,6 +355,7 @@ require_once 'database.php';
                 <th scope="col">Booking Client</th>
                 <th scope="col">Head Count</th>
                 <th scope="col">Paid Price</th>
+                <th scope="col">Operations</th>
               </tr>
             </thead>
             <tbody>
@@ -392,20 +369,20 @@ require_once 'database.php';
               if ($result) {
                 //this will loop to get, assign and display the datas
                 while ($row = mysqli_fetch_assoc($result)) {
-                  $id = $row['Date'];
+                  $date = $row['Date'];
                   $name = $row['Booking Client'];
-                  $email = $row['Head Count'];
-                  $mobile = $row['Paid Price'];
+                  $headcount = $row['Head Count'];
+                  $paidprice = $row['Paid Price'];
 
                   echo '<tr>
-            <th scope="row">' . $id . '</th>
+            <td>' . $date . '</td>
             <td>' . $name . '</td>
-            <td>' . $email . '</td>
-            <td>' . $mobile . '</td>
+            <td>' . $headcount . '</td>
+            <td>' . $paidprice . '</td>
             <td>
-              <button class="btn btn-primary"><a href="update.php?updateid=' . $id . '" class="text-light" style="text-decoration:none;">Update</a></button>
-              <button class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal" data-id="' . $id . '">Delete</button>
-            </td>';
+            <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center text-light" data-bs-toggle="modal" data-bs-target="#updateModal" data-bs-name="' . $name . '">Update</button>
+            <button type="button" class="btn btn-danger d-flex justify-content-center align-items-center text-light" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-name="' . $name . '" onclick="setLink(this)">Delete</button>
+            </td></tr>';
                 }
               }
               ?>
@@ -416,44 +393,120 @@ require_once 'database.php';
     </div>
   </div>
 
-  <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
+  <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmation</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Are you sure you want to delete this record?</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
-        </div>
+        <form action="test OS Reserver Admin.php" method="POST">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Reservation Entry</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-8 m-auto">
+                  <div class="mb-3">
+                    <label for="dateInput" class="col-form-label">Date:</label>
+                    <input type="date" class="form-control" name="Date" id="dateInput">
+                  </div>
+                  <div class="mb-3">
+                    <label for="dateInput" class="col-form-label" required>Name:</label>
+                    <input type="text" class="form-control" name="Name" id="name" value="<?php echo $name; ?>">
+                  </div>
+                  <div class="mb-3">
+                    <label for="head-count" class="col-form-label">Price per Person:
+                      &#8369;500</label>
+                    <label for="head-count" class="col-form-label">Number of People:
+                    </label>
+                    <input type="number" name="Head-Count" id="head-count" min="1" max="30" required>
+                  </div>
+                  <div class="mb-3">
+                    <span class="fw-bold">Total Price: </span><input type="text" class="form-control-plaintext fw-bold"
+                      name="Total-Price" id="total-price" value="0" disabled>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i>
+              Close</button>
+            <button type="button" class="btn btn-danger" onclick="clearForm()"><i class="fa-solid fa-xmark"></i>
+              Clear</button>
+            <button type="submit" class="btn btn-primary" value="Reserve"><i class="fa-solid fa-check"></i>
+              Reserve</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <form method="POST">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Reservation</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <p>Really Delete Reservation?</p>
+              <p id="deleteName">
+              </p>
+              <a id="deleteYes"><button type="button" class="btn btn-danger">Yes</button></a>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 
   <script src="dashboard_files/bootstrap.bundle.min.js"></script>
   <script src="dashboard_files/dashboard.js"></script>
+  <script src="../Referenced Frameworks/jquery-3.7.0.min.js"></script>
   <script>
+
+    //Clear Function
+    function clearForm() {
+      document.getElementById("dateInput").value = ""; // Clear the Date input field
+      document.getElementById("head-count").value = ""; // Clear the Name input field
+    }
+
+    //Modal Overlay Script Delete
+    const exampleModal = document.getElementById('deleteModal');
+    if (exampleModal) {
+      exampleModal.addEventListener('show.bs.modal', event => {
+        // Button that triggered the modal
+        const button = event.relatedTarget;
+
+        // Extract info from data-bs-* attributes
+        const recipient = button.getAttribute('data-bs-name');
+
+        // Update the modal's content.
+        const modalBodyParagraph = exampleModal.querySelector('.modal-body p#deleteName');
+        modalBodyParagraph.textContent = recipient;
+      });
+    }
+
+    function setLink(button) {
+      var name = button.getAttribute('data-bs-name');
+      document.getElementById("deleteYes").href="test OS Deleter.php?Name=" + name;
+      console.log(document.getElementById("deleteYes").href);
+    }
+
+    //Detect Changes in Input and Update Price in Real Time
     $(document).ready(function () {
-      var deleteId;
-
-      // Triggered when the delete button in the table is clicked
-      $('.btn-danger[data-toggle="modal"]').click(function () {
-        deleteId = $(this).data('id');  //assign the ID of table to be deleted
+      $("#head-count").on('input', function () {
+        var headcount = document.getElementById("head-count").value;
+        document.getElementById("total-price").value = (headcount * 500);
       });
+    });
 
-      // Triggered when the delete button in the confirmation modal is clicked
-      $('#confirmDeleteBtn').click(function () {
-        // Redirect to the delete.php file with the specified deleteid parameter
-        window.location.href = "delete.php?deleteid=" + deleteId;
-      });
+
   </script>
+
 </body>
 
 </html>
