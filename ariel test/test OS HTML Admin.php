@@ -392,19 +392,19 @@ require_once 'database.php';
               if ($result) {
                 //this will loop to get, assign and display the datas
                 while ($row = mysqli_fetch_assoc($result)) {
-                  $id = $row['Date'];
+                  $date = $row['Date'];
                   $name = $row['Booking Client'];
-                  $email = $row['Head Count'];
-                  $mobile = $row['Paid Price'];
+                  $headcount = $row['Head Count'];
+                  $paidprice = $row['Paid Price'];
 
                   echo '<tr>
-            <th scope="row">' . $id . '</th>
+            <th scope="row">' . $date . '</th>
             <td>' . $name . '</td>
-            <td>' . $email . '</td>
-            <td>' . $mobile . '</td>
+            <td>' . $headcount . '</td>
+            <td>' . $paidprice . '</td>
             <td>
-              <button class="btn btn-primary"><a href="update.php?updateid=' . $id . '" class="text-light" style="text-decoration:none;">Update</a></button>
-              <button class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal" data-id="' . $id . '">Delete</button>
+              <button class="btn btn-primary"><a href="update.php?updateid=' . $name . '" class="text-light" style="text-decoration:none;">Update</a></button>
+              <button class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal" data-id="' . $name . '">Delete</button>
             </td>';
                 }
               }
@@ -452,7 +452,7 @@ require_once 'database.php';
       $('#confirmDeleteBtn').click(function () {
         // Redirect to the delete.php file with the specified deleteid parameter
         window.location.href = "delete.php?deleteid=" + deleteId;
-      });
+      }  });
   </script>
 </body>
 
