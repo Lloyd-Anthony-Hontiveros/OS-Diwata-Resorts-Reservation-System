@@ -88,7 +88,6 @@ function generateCalendarDates($startDay, $numDays, $monthNumber)
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/color.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/popup.css"> -->
 
     <!-- Linking Font Awesome files -->
     <link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/fontawesome.css">
