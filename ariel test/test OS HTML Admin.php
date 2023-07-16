@@ -411,7 +411,7 @@ require_once 'database.php';
                   </div>
                   <div class="mb-3">
                     <label for="dateInput" class="col-form-label" required>Name:</label>
-                    <input type="text" class="form-control" name="Name" id="name" value="<?php echo $name; ?>">
+                    <input type="text" class="form-control" name="Name" id="name">
                   </div>
                   <div class="mb-3">
                     <label for="head-count" class="col-form-label">Price per Person:
@@ -488,6 +488,26 @@ require_once 'database.php';
         const modalBodyParagraph = exampleModal.querySelector('.modal-body p#deleteName');
         modalBodyParagraph.textContent = recipient;
       });
+    }
+
+    //Modal Overlay Script Update
+    const exampleModal2 = document.getElementById('updateModal');
+    if (exampleModal2) {
+      exampleModal2.addEventListener('show.bs.modal', event => {
+        // Button that triggered the modal
+        const button2 = event.relatedTarget;
+
+        // Extract info from data-bs-* attributes
+        const recipient2 = button2.getAttribute('data-bs-name');
+
+        // Update the modal's content.
+        const modalBodyParagraph2 = exampleModal2.querySelector('.modal-body input#name');
+        modalBodyParagraph2.value = recipient2;
+      });
+    }
+
+    function setInputs(button) {
+
     }
 
     function setLink(button) {

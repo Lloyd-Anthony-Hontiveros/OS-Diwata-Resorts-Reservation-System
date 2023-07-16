@@ -23,7 +23,7 @@
   }
   else {
     //Update DATA
-    $sql = "UPDATE `booking_status` SET `Date`='$date',`Head Count`='$headcount',`Paid Price`='$paidprice' WHERE 'Booking Client' = '$name'";
+    $sql = "UPDATE `booking_status` SET `Date`='$date',`Head Count`='$headcount',`Paid Price`='$paidprice' WHERE `booking_status`.`Booking Client` = '$name'";
     $result = mysqli_query($con, $sql);
 
     header("location: test OS HTML Admin.php");
