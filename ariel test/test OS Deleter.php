@@ -8,7 +8,7 @@
 
  $name = $_GET['Name'];
 
- $sql = "DELETE FROM `booking_status` WHERE 'Booking Client' = '$name'";
+ $sql = "DELETE FROM `booking_status` WHERE `booking_status`.`Booking Client` = '$name'";
  $result = mysqli_query($con, $sql);
 
  header("location: test OS HTML Admin.php");

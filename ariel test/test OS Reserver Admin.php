@@ -3,7 +3,7 @@
   $date = $_POST['Date'];
   $name = $_POST['Name'];
   $headcount = $_POST["Head-Count"];
-  $paidprice = (int)$_POST["Total-Price"];
+  $paidprice = (int)$_POST['Total-Price'];
 
   $serverName = "localhost";
   $username = "root";
@@ -23,7 +23,7 @@
   }
   else {
     //Update DATA
-    $sql = "UPDATE `booking_status` SET `Date`='$date',`Head Count`='$headcount',`Paid Price`='$paidprice' WHERE Name = '$name'";
+    $sql = "UPDATE `booking_status` SET `Date`='$date',`Head Count`='$headcount',`Paid Price`='$paidprice' WHERE 'Booking Client' = '$name'";
     $result = mysqli_query($con, $sql);
 
     header("location: test OS HTML Admin.php");

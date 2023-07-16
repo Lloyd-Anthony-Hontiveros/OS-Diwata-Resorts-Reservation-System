@@ -355,6 +355,7 @@ require_once 'database.php';
                 <th scope="col">Booking Client</th>
                 <th scope="col">Head Count</th>
                 <th scope="col">Paid Price</th>
+                <th scope="col">Operations</th>
               </tr>
             </thead>
             <tbody>
@@ -366,7 +367,6 @@ require_once 'database.php';
               $result = mysqli_query($con, $sql);
 
               if ($result) {
-                $counter = 1;
                 //this will loop to get, assign and display the datas
                 while ($row = mysqli_fetch_assoc($result)) {
                   $date = $row['Date'];
@@ -375,15 +375,14 @@ require_once 'database.php';
                   $paidprice = $row['Paid Price'];
 
                   echo '<tr>
-            <th scope="row">' . $date . '</th>
-            <td id="name' . $counter . '">' . $name . '</td>
+            <td>' . $date . '</td>
+            <td>' . $name . '</td>
             <td>' . $headcount . '</td>
             <td>' . $paidprice . '</td>
             <td>
             <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center text-light" data-bs-toggle="modal" data-bs-target="#updateModal" data-bs-name="' . $name . '">Update</button>
-            <button type="button" class="btn btn-danger d-flex justify-content-center align-items-center text-light" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-name="' . $name . '">Delete</button>
-            </td>';
-                  $counter++;
+            <button type="button" class="btn btn-danger d-flex justify-content-center align-items-center text-light" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-name="' . $name . '" onclick="setLink(this)">Delete</button>
+            </td></tr>';
                 }
               }
               ?>
@@ -453,8 +452,10 @@ require_once 'database.php';
           <div class="modal-body">
             <div class="container-fluid">
               <p>Really Delete Reservation?</p>
-              <a type="button" class="btn btn-danger" href="test OS Deleter.php?Name=<?php echo $name; ?>">Yes</a>
-              <button type="button" class="btn btn-secondary">No</button>
+              <p id="deleteName">
+              </p>
+              <a id="deleteYes"><button type="button" class="btn btn-danger">Yes</button></a>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
             </div>
           </div>
         </form>
@@ -464,6 +465,7 @@ require_once 'database.php';
 
   <script src="dashboard_files/bootstrap.bundle.min.js"></script>
   <script src="dashboard_files/dashboard.js"></script>
+  <script src="../Referenced Frameworks/jquery-3.7.0.min.js"></script>
   <script>
 
     //Clear Function
@@ -472,34 +474,26 @@ require_once 'database.php';
       document.getElementById("head-count").value = ""; // Clear the Name input field
     }
 
-    //Modal Overlay Script Update
-    const exampleModal = document.getElementById('updateModal')
+    //Modal Overlay Script Delete
+    const exampleModal = document.getElementById('deleteModal');
     if (exampleModal) {
       exampleModal.addEventListener('show.bs.modal', event => {
         // Button that triggered the modal
-        const button = event.relatedTarget
+        const button = event.relatedTarget;
+
         // Extract info from data-bs-* attributes
-        const recipient = button.getAttribute('data-bs-name')
+        const recipient = button.getAttribute('data-bs-name');
 
         // Update the modal's content.
-        const modalBodyInput = exampleModal.querySelector('.modal-body input')
-        modalBodyInput.value = recipient
-      })
+        const modalBodyParagraph = exampleModal.querySelector('.modal-body p#deleteName');
+        modalBodyParagraph.textContent = recipient;
+      });
     }
 
-    //Modal Overlay Script Delete
-    const exampleModal = document.getElementById('deleteModal')
-    if (exampleModal) {
-      exampleModal.addEventListener('show.bs.modal', event => {
-        // Button that triggered the modal
-        const button = event.relatedTarget
-        // Extract info from data-bs-* attributes
-        const recipient = button.getAttribute('data-bs-name')
-
-        // Update the modal's content.
-        const modalBodyInput = exampleModal.querySelector('.modal-body input')
-        modalBodyInput.value = recipient
-      })
+    function setLink(button) {
+      var name = button.getAttribute('data-bs-name');
+      document.getElementById("deleteYes").href="test OS Deleter.php?Name=" + name;
+      console.log(document.getElementById("deleteYes").href);
     }
 
     //Detect Changes in Input and Update Price in Real Time
