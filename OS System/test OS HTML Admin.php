@@ -411,7 +411,7 @@ require_once 'database.php';
                   </div>
                   <div class="mb-3">
                     <label for="name" class="col-form-label">Name:</label>
-                    <input type="text" class="form-control" name="Name" id="name" disabled>
+                    <input type="text" class="form-control" name="Name" id="name" readonly>
                   </div>
                   <div class="mb-3">
                     <label for="head-count" class="col-form-label">Price per Person:
