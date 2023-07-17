@@ -407,7 +407,7 @@ require_once 'database.php';
                 <div class="col-8 m-auto">
                   <div class="mb-3">
                     <label for="dateInput" class="col-form-label">Date:</label>
-                    <input type="date" class="form-control" name="Date" id="dateInput">
+                    <input type="date" class="form-control" name="Date" id="dateInput" readonly>
                   </div>
                   <div class="mb-3">
                     <label for="name" class="col-form-label">Name:</label>

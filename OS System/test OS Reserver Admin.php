@@ -11,10 +11,6 @@ $password = "";
 $DBname = "ostest_connectdb";
 $con = mysqli_connect($serverName, $username, $password, $DBname);
 
-//Check if Date is valid
-
-$check = mysqli_query($con, "SELECT * FROM booking_status WHERE Date = '$date'");
-
 //Update DATA
 $sql = "UPDATE `booking_status` SET `Date`='$date',`Head Count`='$headcount',`Paid Price`='$paidprice' WHERE `booking_status`.`Booking Client` = \"" . $name . "\"";
 $result = mysqli_query($con, $sql);

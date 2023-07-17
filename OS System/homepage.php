@@ -439,7 +439,7 @@
 								<p>THANK YOU EVERYONE</p>
 							</div><!--copyright end-->
 							<div class="credit">
-								<p>Project of: <a href="test OS HTML Admin.php" title>Ariel Nazareno, Christian Almazan, Lloyd Hontiveros</a>
+								<p>Project of: <a href="login.php" title>Ariel Nazareno, Christian Almazan, Lloyd Hontiveros</a>
 								</p>
 							</div><!--credit end-->
 						</div><!--bottom-footer end-->
