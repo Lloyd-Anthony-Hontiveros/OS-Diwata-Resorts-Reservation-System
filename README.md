@@ -1,5 +1,5 @@
 How to Use:
-1. homepage.php
+1. Click File homepage.php
 2. Homepage Navbars -> homepage.php
                     -> about.php
                     -> amenities.php
