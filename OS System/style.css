@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    background: linear-gradient(120deg,#788085,#f19430);
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.form-group form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .col-form-label{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    width: 300px;
+    margin: 20px 0;
+}
+.col-form-label input{
+    width: 100%;
+    padding: 0 5px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.col-form-label label{
+    position: absolute;
+    top: 50px;
+    color: #adadad;
+    transform: translateY(-50px);
+    font-size: 16px;
+    pointer-events: none;
+    
+}
+
+
