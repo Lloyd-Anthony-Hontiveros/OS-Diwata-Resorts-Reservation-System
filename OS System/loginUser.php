@@ -2,7 +2,7 @@
 session_start();
 
 require_once "database.php";
-$message = $_GET["message"];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,13 +35,15 @@ $message = $_GET["message"];
 <body>
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <form action="login.php" method="post">
-        <div>
-            <?php
-                if (isset($message)) {
+            <h1 type="text" color="black" class="btn btn-light position-relative end-0 fs-1 disabled">User Log-in</h1>
+            <div>
+                <?php
+                if ($_POST) {
+                    $message = $_GET["message"];
                     echo "<div class='alert alert-success'>$message</div>";
                 }
-            ?>
-        </div>
+                ?>
+            </div>
             <div class="form-group">
                 <label for="user" class="col-form-label">Username</label>
                 <input type="text" placeholder="Enter Username: " name="user" class="form-control">
@@ -51,14 +53,15 @@ $message = $_GET["message"];
             <div class="form-group input-group">
                 <input type="password" placeholder="Enter Password:" name="password" class="form-control">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary toggle-password" type="button" data-toggle="tooltip"
+                    <button class="btn btn-secondary toggle-password" type="button" data-toggle="tooltip"
                         data-placement="top" title="Show Password"> <i class="fa-solid fa-eye-slash"></i>
                 </div>
             </div>
             <div class="form-btn">
                 <input type="submit" value="Login" name="login" class="btn btn-primary">
-                <!-- <span style="display: inline-block; width: 300px"></span> -->
-
+                <span style="display: inline-block; width: 50px"></span>
+                <a type="button" class="btn btn-secondary position-relative end-0" href="registerUser.php">Register</a>
+                <span style="display: inline-block; width: 50px"></span>
                 <a type="button" class="btn btn-light position-relative end-0" href="homepage.php">Home</a>
             </div>
             <?php
@@ -76,8 +79,7 @@ $message = $_GET["message"];
                         $_SESSION["firstname"] = $user["firstname"];
                         $_SESSION["email address"] = $user["email address"];
                         $_SESSION["contact number"] = $user["contact number"];
-                    }
-                     else {
+                    } else {
                         echo "<div class='alert alert-danger'>Password does not match</div>";
                     }
                 } else {
