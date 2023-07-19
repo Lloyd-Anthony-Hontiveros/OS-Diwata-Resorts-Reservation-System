@@ -80,7 +80,7 @@ require_once "database.php";
             </div>
             <br>
             <div class="form-btn">
-                <input type="submit" value="Login" name="login" class="btn btn-primary">
+                <input type="submit" value="Login" name="Register" class="btn btn-primary">
                 <span style="display: inline-block; width: 300px"></span>
                 <a type="button" class="btn btn-secondary position-relative end-0" href="homepage.php">Home</a>
             </div>
