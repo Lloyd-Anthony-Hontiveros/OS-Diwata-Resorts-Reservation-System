@@ -70,7 +70,7 @@ require_once "database.php";
             <?php
             if (isset($_POST["login"])) {
                 $username = $_POST["user"];
-                $password = password_verify($_POST["password"], );
+                $password = $_POST["password"];
                 $sql = "SELECT * FROM admin WHERE username = '$username'";
                 $result = mysqli_query($con, $sql);
                 $user = mysqli_fetch_array($result, MYSQLI_ASSOC);

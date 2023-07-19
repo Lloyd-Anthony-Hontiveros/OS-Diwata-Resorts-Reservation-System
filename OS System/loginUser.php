@@ -3,6 +3,16 @@ session_start();
 
 require_once "database.php";
 
+function console_log($output, $with_script_tags = true) {
+    $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) .
+');';
+    if ($with_script_tags) {
+        $js_code = '<script>' . $js_code . '</script>';
+    }
+    echo $js_code;
+}
+
+$message = "nein";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,13 +44,15 @@ require_once "database.php";
 
 <body>
     <div class="container d-flex justify-content-center align-items-center vh-100">
-        <form action="login.php" method="post">
+        <form action="loginUser.php" method="post">
             <h1 type="text" color="black" class="btn btn-light position-relative end-0 fs-1 disabled">User Log-in</h1>
             <div>
                 <?php
                 if ($_POST) {
-                    $message = $_GET["message"];
-                    echo "<div class='alert alert-success'>$message</div>";
+                    if (strcmp($message, "nein") != 0) {
+                        $message = $_GET["message"];
+                        echo "<div class='alert alert-success'>$message</div>";
+                    }
                 }
                 ?>
             </div>
@@ -66,19 +78,21 @@ require_once "database.php";
             </div>
             <?php
             if (isset($_POST["login"])) {
-                $user = $_POST["user"];
-                $password = password_verify($_POST["password"], $user["password"]);
-                $sql = "SELECT * FROM users WHERE username = '$user'";
+                $username = $_POST["user"];
+                $sql = "SELECT * FROM users WHERE username = '$username'";
                 $result = mysqli_query($con, $sql);
                 $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                $password = password_verify($_POST["password"], $user["password"]);
                 if ($user) {
                     if ($password) {
-                        $_SESSION["username"] = $user["username"];
-                        $_SESSION["FullName"] = $user["FullName"];
-                        $_SESSION["surname"] = $user["surname"];
-                        $_SESSION["firstname"] = $user["firstname"];
-                        $_SESSION["email address"] = $user["email address"];
-                        $_SESSION["contact number"] = $user["contact number"];
+                        $_SESSION['username'] = $user['username'];
+                        $_SESSION['FullName'] = $user['FullName'];
+                        $_SESSION['surname'] = $user['surname'];
+                        $_SESSION['firstname'] = $user['firstname'];
+                        $_SESSION['email address'] = $user['email address'];
+                        $_SESSION['contact number'] = $user['contact number'];
+
+                        header("location: homepage.php?");
                     } else {
                         echo "<div class='alert alert-danger'>Password does not match</div>";
                     }
