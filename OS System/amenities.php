@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Villa Diwata Resort</title>
+	<link rel="icon" href="images/icon logo.jpg">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Linking Bootstrap css file -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -89,92 +90,114 @@
 					</div><!--term-one end-->
 					<div class="row">
 						<div class="tm-conditions">
-							<div class="col-md-6">
-								<div class="tmc-one">
-									<h3 class="term-title">Lodgings</h3>
-									<p>Customization: Most generators only output paragraphs of about the same length.
-										Sometimes you need lists, headings, long paragraphs, short paragraphs, etc. The
-										website/magazine that you're designing probably isn't going to be filled with
-										uniform paragraphs, so your placeholder text should reflect that.</p>
-								</div><!--tmc-one end-->
+							<div class="col-md-10 m-auto">
 								<div class="tmc-one">
 									<h3 class="term-title">Sound Systems and Other Equipment</h3>
-									<div class="condi">
-										<span>General / Owenrship</span>
-										<p>Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Nemo
-											nostrum istius generis asotos iucunde putat vivere. Hoc non est positum in
-											nostra actione. Atque his de rebus et splendida est eorum et illustris
-											oratio. Igitur neque stultorum quisquam beatus neque sapientium non beatus.
-											Quid enim possumus hoc agere divinius? Profectus in exilium Tubulus statim
-											nec respondere ausus; Et non ex maxima parte de tota iudicabis? Heri,
-											inquam, ludis commissis ex urbe profectus veni ad vesperum. A quibus propter
-											discendi cupiditatem videmus ultimas terras esse peragratas. Quid est
-											igitur, cur ita semper deum appellet Epicurus beatum et aeternum?</p>
-									</div><!--condi end-->
-									<div class="condi">
-										<span>Hyatt Tradmarks</span>
-										<p>Igitur neque stultorum quisquam beatus neque sapientium non beatus. Quid enim
-											possumus hoc agere divinius? Profectus in exilium Tubulus statim nec
-											respondere ausus; Et non ex maxima parte de tota iudicabis? Heri, inquam,
-											ludis commissis ex urbe profectus veni ad vesperum. A quibus propter
-											discendi cupiditatem videmus ultimas terras esse peragratas. Quid est
-											igitur, cur ita semper deum appellet Epicurus beatum et aeternum? Quos
-											quidem tibi studiose et diligenter tractandos magnopere censeo. Nemo nostrum
-											istius generis asotos iucunde putat vivere. Hoc non est positum in nostra
-											actione. Atque his de rebus et splendida est eorum et illustris oratio. </p>
-									</div><!--condi end-->
-									<div class="condi">
-										<span>Copyrights</span>
-										<p>Hoc non est positum in nostra actione. Atque his de rebus et splendida est
-											eorum et illustris oratio. Igitur neque stultorum quisquam beatus neque
-											sapientium non beatus. Quid enim possumus hoc agere divinius. </p>
-									</div><!--condi end-->
+									<p>Our sound systems consists of 2 Alphasonik All-in-one 8" Powered 800W PRO DJ
+										Amplified Loud Speaker Sets for live and stage performances as well as 3 PylePro
+										PWMA230BT Speaker Sets for more small-scale performances and individual usage.
+										The Alphasonik speaker sets are already integrated with the stage spaces within
+										the resort itself, while the PylePro speaker sets can be reserved as requested
+										by the customer. </p>
 								</div><!--tmc-one end-->
-							</div>
-							<div class="col-md-6">
 								<div class="tmc-one">
-									<h3 class="term-title">Rules and Regulations while residing in the Resort</h3>
+									<h3 class="term-title">Lodgings and Spaces</h3>
 									<div class="condi">
-										<span>General</span>
-										<p>Septem autem illi non suo, sed populorum suffragio omnium nominati sunt.Duo
-											Reges: constructio interrete. Cum praesertim illa perdiscere ludus esset.
-											Remihi non aeque satisfacit, et quidem locis pluribus. Ita graviter et
-											severe voluptatem secrevit a bono. Memini vero, inquam; Igitur neque
-											stultorum quisquam beatus neque sapientium non beatus. Nihil ad rem! Ne sit
-											sane; Quae quo sunt excelsiores, eo dant clariora indicia naturae.</p>
+										<span>Residential Lodgings</span>
+										<p>Experience comfort and convenience in our residential lodgings designed to
+											provide a cozy retreat during your stay. Each lodging features an
+											air-conditioned bedroom with a comfortable queen-sized bed, offering a
+											peaceful ambiance for a restful night's sleep. The connected bathroom is
+											well-equipped with modern fixtures and amenities to cater to your needs.
+											<br>
+											<br>
+											Inside the residential lodging, you'll also find a storage cabinet,
+											providing ample space to keep your belongings organized and within reach.
+											Whether you're traveling alone or with a small group, our residential
+											lodgings can accommodate up to 4 guests, ensuring a comfortable and
+											enjoyable stay for everyone.
+											<br>
+											<br>
+											Our priority is to create a relaxing and hassle-free environment, where you
+											can unwind and recharge. Our residential lodgings offer a simple yet
+											comfortable setting, perfect for those seeking a tranquil and convenient
+											experience.
+											<br>
+										</p>
 									</div><!--condi end-->
 									<div class="condi">
-										<span>Cleanliness</span>
-										<p>Hoc non est positum in nostra actione. Atque his de rebus et splendida eorum
-											et illustris oratio. Igitur neque stultorum quisquam beatus neque sapientium
-											est non beatus. Quid enim possumus hoc agere divinius. </p>
+										<span>Meeting Spaces</span>
+										<p>Discover our versatile meeting spaces, designed to cater to your professional
+											needs. Our meeting spaces are thoughtfully arranged, featuring 5
+											interconnected office spaces that provide a conducive environment for
+											collaboration and productivity. Nestled within this setup is a dedicated
+											meeting room, complete with a spacious 10-seat table, perfect for important
+											meetings, brainstorming sessions, and discussions.
+											<br>
+											<br>
+											The meeting room is specifically designed to foster effective communication
+											and decision-making, with ample space for participants to engage in
+											meaningful conversations. The table offers comfort and functionality,
+											allowing for the smooth flow of ideas and discussions.
+											<br>
+											<br>
+											In addition to the meeting room, our meeting spaces also provide cabinets
+											and office shelves, providing convenient storage options for your files,
+											paperwork, and other essential materials. Stay organized and have quick
+											access to all the resources you need for successful meetings and
+											presentations.
+											<br>
+											<br>
+											We understand the importance of creating an environment that promotes
+											productivity and efficiency, and our meeting spaces are designed with these
+											goals in mind. Whether you're hosting corporate meetings, team workshops, or
+											client presentations, our well-equipped meeting spaces offer the ideal
+											setting for your professional endeavors.
+											<br>
+											<br>
+											Experience the convenience and functionality of our meeting spaces, where
+											every detail is carefully curated to enhance your business interactions. Our
+											commitment to providing top-notch facilities ensures that your meetings and
+											discussions are conducted seamlessly, enabling you to achieve your goals and
+											make the most of your time.
+										</p>
 									</div><!--condi end-->
 									<div class="condi">
-										<span>Equipment Handling</span>
-										<p>Memini vero, inquam; Igitur neque stultorum quisquam beatus neque sapientium
-											non beatus. Nihil ad rem! Ne sit sane; Quae quo sunt excelsiores, eo dant
-											clariora indicia naturae. Septem autem illi non suo, sed populorum suffragio
-											omnium nominati sunt.Duo Reges: constructio interrete. Cum praesertim illa
-											perdiscere ludus esset. Re mihi non aeque satisfacit, et quidem locis
-											pluribus. Ita graviter et secrevit a bono. </p>
+										<span>Event Spaces</span>
+										<p>Immerse yourself in the captivating atmosphere of our two remarkable Event
+											Spaces, where unforgettable moments come to life. Each Event Space features
+											a spacious elevated stage, ranging from 20 to 40 feet in width and 12 to 24
+											feet in length. This expansive stage provides the perfect platform for
+											performers to showcase their talents and captivate audiences.
+											<br>
+											<br>
+											To ensure exceptional audio quality and immersive experiences, we have
+											strategically placed state-of-the-art sound systems on the sides of the
+											stage. These professional-grade systems deliver crystal-clear sound,
+											enveloping the Event Spaces with rich melodies and crisp performances.
+											Additionally, a connected PA (Public Address) system is positioned behind
+											the stage, enhancing sound distribution and ensuring optimal clarity for
+											every attendee.
+											<br>
+											<br>
+											The Event Spaces offer a comfortable and inviting viewing area,
+											accommodating up to 30 people at a time. Whether you're hosting a live
+											performance, a conference, or a special gathering, the intimacy of our Event
+											Spaces creates an engaging and immersive atmosphere that leaves a lasting
+											impression on both performers and guests.
+											<br>
+											<br>
+											With meticulous attention to detail, our Event Spaces are designed to
+											fulfill your reservation-based needs. The versatility of the stage, coupled
+											with the cutting-edge sound systems and spacious viewing area, guarantees an
+											unforgettable event experience.
+											<br>
+											<br>
+											Unleash your creativity and bring your vision to life at our Event Spaces.
+											From lively performances to impactful presentations, our versatile and
+											technologically advanced facilities provide the perfect stage for your next
+											reservation-based event. </p>
 									</div><!--condi end-->
-									<div class="condi">
-										<span>Item Policy</span>
-										<p>Cum praesertim illa perdiscere ludus esset. Re mihi aeque satisfacit, et
-											quidem locis pluribus. Ita graviter et secrevit a bono. Memini vero, inquam;
-											Igitur neque stultorum quisquam beatus neque sapientium non beatus. Nihil ad
-											Ne sit sane; Quae quo sunt excelsiores, eo dant clariora indicia naturae.
-											Septem autem suo, sed populorum suffragio omnium nominati. </p>
-									</div><!--condi end-->
-									<div class="condi">
-										<ul>
-											<li>Nihil ad rem! Ne sit sane; eo dant clariora indicia naturae.</li>
-											<li>Septem autem non suo, sed populorum suffragio omnium nominati sunt.</li>
-											<li>Duo Reges: constructio interrete.</li>
-											<li>Cum praesertim illa perdiscere ludus esset.</li>
-											<li>Re mihi non aeque satisfacit, et quidem locis pluribus. </li>
-										</ul>
-									</div>
 								</div><!--tmc-one end-->
 							</div>
 						</div><!--tm-conditions end-->
