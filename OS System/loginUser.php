@@ -58,13 +58,19 @@ require_once "database.php";
             if (isset($_POST["login"])) {
                 $user = $_POST["user"];
                 $password = $_POST["password"];
-                $sql = "SELECT * FROM admin WHERE username = '$user'";
+                $sql = "SELECT * FROM users WHERE username = '$user'";
                 $result = mysqli_query($con, $sql);
                 $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 if ($user) {
                     if ($password == $user["password"]) {
-                        header("location: test OS HTML Admin.php");
-                    } else {
+                        $_SESSION["username"] = $user["username"];
+                        $_SESSION["FullName"] = $user["FullName"];
+                        $_SESSION["surname"] = $user["surname"];
+                        $_SESSION["firstname"] = $user["firstname"];
+                        $_SESSION["email address"] = $user["email address"];
+                        $_SESSION["contact number"] = $user["contact number"];
+                    }
+                     else {
                         echo "<div class='alert alert-danger'>Password does not match</div>";
                     }
                 } else {

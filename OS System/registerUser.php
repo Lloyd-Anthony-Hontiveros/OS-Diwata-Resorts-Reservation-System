@@ -48,6 +48,34 @@ require_once "database.php";
                         data-placement="top" title="Show Password"> <i class="fa-solid fa-eye-slash"></i>
                 </div>
             </div>
+            <div class="form-group">
+                <label for="fullname" class="col-form-label">Full Name</label>
+                <input type="text" placeholder="Enter Full Name: " name="FullName" class="form-control">
+                <br>
+            </div>
+            <div class="form-group">
+                <label for="surname" class="col-form-label">Surname</label>
+                <input type="text" placeholder="Enter Surname: " name="surname" class="form-control">
+                <br>
+            </div>
+            <div class="form-group">
+                <label for="firstname" class="col-form-label">First Name</label>
+                <input type="text" placeholder="Enter First Name: " name="firstname" class="form-control">
+                <br>
+            </div>
+            <div class="form-group">
+                <label for="email address" class="col-form-label">Email Address</label>
+                <input type="email" placeholder="Enter Email Address: " name="email address" class="form-control">
+                <br>
+            </div>
+            <label for="contact number" class="col-form-label">Contact Number</label>
+            <div class="form-group input-group">
+                <input type="text" placeholder="Enter Contact Number: " name="contact number" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="btn btn-secondary">+63</span>
+                </div>
+                <br>
+            </div>
             <div class="form-btn">
                 <input type="submit" value="Login" name="login" class="btn btn-primary">
                 <!-- <span style="display: inline-block; width: 300px"></span> -->
@@ -56,9 +84,9 @@ require_once "database.php";
             </div>
             <?php
             if (isset($_POST["login"])) {
-                $user = $_POST["user"];
+                $email = $_POST["user"];
                 $password = $_POST["password"];
-                $sql = "SELECT * FROM admin WHERE username = '$user'";
+                $sql = "SELECT * FROM admin WHERE username = '$email'";
                 $result = mysqli_query($con, $sql);
                 $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 if ($user) {
