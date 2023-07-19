@@ -2,7 +2,7 @@
 session_start();
 
 require_once "database.php";
-
+$message = $_GET["message"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,6 +35,13 @@ require_once "database.php";
 <body>
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <form action="login.php" method="post">
+        <div>
+            <?php
+                if (isset($message)) {
+                    echo "<div class='alert alert-success'>$message</div>";
+                }
+            ?>
+        </div>
             <div class="form-group">
                 <label for="user" class="col-form-label">Username</label>
                 <input type="text" placeholder="Enter Username: " name="user" class="form-control">
@@ -57,12 +64,12 @@ require_once "database.php";
             <?php
             if (isset($_POST["login"])) {
                 $user = $_POST["user"];
-                $password = $_POST["password"];
+                $password = password_verify($_POST["password"], $user["password"]);
                 $sql = "SELECT * FROM users WHERE username = '$user'";
                 $result = mysqli_query($con, $sql);
                 $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 if ($user) {
-                    if ($password == $user["password"]) {
+                    if ($password) {
                         $_SESSION["username"] = $user["username"];
                         $_SESSION["FullName"] = $user["FullName"];
                         $_SESSION["surname"] = $user["surname"];
