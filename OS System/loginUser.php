@@ -2,7 +2,7 @@
 session_start();
 
 require_once "database.php";
-
+$message = $_GET["message"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +16,7 @@ require_once "database.php";
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/fontawesome.css">
     <link rel="stylesheet" href="../Referenced Frameworks/Font Awesome/css/solid.css">
-    <link rel="stylesheet" href="style.css">
- 
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const togglePassword = document.querySelector('.toggle-password');
@@ -36,29 +35,17 @@ require_once "database.php";
 <body>
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <form action="login.php" method="post">
-        <center><a type="text" color= "black"class="btn btn-light position-relative end-0" href="#"><h4>Admin Log-in</h4></a></center>
-        
+        <div>
+            <?php
+                if (isset($message)) {
+                    echo "<div class='alert alert-success'>$message</div>";
+                }
+            ?>
+        </div>
             <div class="form-group">
                 <label for="user" class="col-form-label">Username</label>
-                <input type="text" placeholder="Enter Username: " name="user" class="form-control"><br>
-                <?php
-            if (isset($_POST["login"])) {
-                $email = $_POST["user"];
-                $password = $_POST["password"];
-                $sql = "SELECT * FROM admin WHERE username = '$email'";
-                $result = mysqli_query($con, $sql);
-                $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
-                if ($user) {
-                    if ($password == $user["password"]) {
-                        header("location: test OS HTML Admin.php");
-                    }
-                } else {
-                    echo "<div class='alert alert-danger'>Username does not match</div>";
-                }
-            }
-            ?>
+                <input type="text" placeholder="Enter Username: " name="user" class="form-control">
                 <br>
-                
             </div>
             <label for="password" class="col-form-label">Password</label>
             <div class="form-group input-group">
@@ -68,31 +55,36 @@ require_once "database.php";
                         data-placement="top" title="Show Password"> <i class="fa-solid fa-eye-slash"></i>
                 </div>
             </div>
-            <br>
-            <?php
-            if (isset($_POST["login"])) {
-                $user = $_POST["user"];
-                $password = $_POST["password"];
-                $sql = "SELECT * FROM admin WHERE username = '$user'";
-                $result = mysqli_query($con, $sql);
-                $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
-                if ($user) {
-                    if ($password == $user["password"]) {
-                        header("location: test OS HTML Admin.php");
-                    } else {
-                        echo "<div class='alert alert-danger'>Password does not match</div>";  
-                    }
-                } 
-            }
-            ?>
-            <br>
             <div class="form-btn">
                 <input type="submit" value="Login" name="login" class="btn btn-primary">
                 <!-- <span style="display: inline-block; width: 300px"></span> -->
 
                 <a type="button" class="btn btn-light position-relative end-0" href="homepage.php">Home</a>
             </div>
-          
+            <?php
+            if (isset($_POST["login"])) {
+                $user = $_POST["user"];
+                $password = password_verify($_POST["password"], $user["password"]);
+                $sql = "SELECT * FROM users WHERE username = '$user'";
+                $result = mysqli_query($con, $sql);
+                $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                if ($user) {
+                    if ($password) {
+                        $_SESSION["username"] = $user["username"];
+                        $_SESSION["FullName"] = $user["FullName"];
+                        $_SESSION["surname"] = $user["surname"];
+                        $_SESSION["firstname"] = $user["firstname"];
+                        $_SESSION["email address"] = $user["email address"];
+                        $_SESSION["contact number"] = $user["contact number"];
+                    }
+                     else {
+                        echo "<div class='alert alert-danger'>Password does not match</div>";
+                    }
+                } else {
+                    echo "<div class='alert alert-danger'>Username does not match</div>";
+                }
+            }
+            ?>
         </form>
         <br>
     </div>
