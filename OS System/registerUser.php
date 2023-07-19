@@ -33,7 +33,7 @@ require_once "database.php";
 </head>
 
 <body>
-    <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="container d-flex justify-content-center align-items-center vh-100 overflow-auto">
         <form action="registerbackend.php" method="post">
             <div class="form-group">
                 <label for="user" class="col-form-label">Username</label>
@@ -80,7 +80,7 @@ require_once "database.php";
             </div>
             <br>
             <div class="form-btn">
-                <input type="submit" value="Login" name="Register" class="btn btn-primary">
+                <input type="submit" value="Register" name="Register" class="btn btn-primary">
                 <span style="display: inline-block; width: 300px"></span>
                 <a type="button" class="btn btn-secondary position-relative end-0" href="homepage.php">Home</a>
             </div>
