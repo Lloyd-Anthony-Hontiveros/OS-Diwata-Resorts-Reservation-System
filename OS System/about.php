@@ -80,10 +80,16 @@
 						<div class="col-md-7">
 							<div class="relax-history">
 								<h3>ABOUT VILLA DIWATA RESORT</h3>
-								<p>Villa Diwata Resort is a venue-type reservation resort that caters to medium-sized
-									events such as reunions, family gatherings etc. It incorporates lodgings for up to
-									30 people, as well as several other rooms for other functions such as meetings,
-									recreation, and events.</p>
+								<p>Discover an extraordinary retreat at our exclusive reservation-based resort. Immerse
+									yourself in the tranquility of our secluded property, where you and your group can
+									enjoy the entire resort for a full day of relaxation and festivities. With
+									accommodations designed to comfortably house up to 30 people, our resort offers a
+									blend of comfort and style. From spacious guest rooms to inviting common areas,
+									every aspect of your stay is carefully curated for your utmost satisfaction.
+									Additionally, our resort features versatile event spaces complete with advanced
+									sound systems and stages, providing the perfect backdrop for venue-style events.
+									Experience the epitome of privacy, luxury, and convenience at our reservation-based
+									resort.</p>
 								<ul>
 									<li>
 										<h5>20</h5>
@@ -98,7 +104,7 @@
 										<span>Stage Spaces</span>
 									</li>
 									<li>
-										<h5>10</h5>
+										<h5>5</h5>
 										<span>Speaker Sets</span>
 									</li>
 								</ul>
@@ -130,77 +136,6 @@
 				</div>
 			</div>
 		</section>
-
-
-		<section>
-			<div class="container">
-				<div class="about-imgs">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="abt-img">
-								<img src="http://creativethemes.us/relax/images/resources/about1.jpg" alt="">
-							</div><!--abt-img end-->
-						</div>
-						<div class="col-md-3">
-							<div class="abt-img">
-								<img src="http://creativethemes.us/relax/images/resources/about2.jpg" alt="">
-							</div><!--abt-img end-->
-						</div>
-						<div class="col-md-3">
-							<div class="abt-img">
-								<img src="http://creativethemes.us/relax/images/resources/about3.jpg" alt="">
-							</div><!--abt-img end-->
-						</div>
-						<div class="col-md-3">
-							<div class="abt-img">
-								<img src="http://creativethemes.us/relax/images/resources/about4.jpg" alt="">
-							</div><!--abt-img end-->
-						</div>
-					</div>
-				</div><!--about-imgs end-->
-				<div class="abt-links">
-					<div class="row no-gutter">
-						<div class="col-md-6">
-							<ul>
-								<li>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-								</li>
-								<li>
-									<p>Nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-								</li>
-								<li>
-									<p>Nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-								</li>
-								<li>
-									<p>Nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-								</li>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<ul>
-								<li>
-									<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.</p>
-								</li>
-								<li>
-									<p>Duis autem vel eum iriure dolor in hendrerit</p>
-								</li>
-								<li>
-									<p>Blandit praesent luptatum zzril delenit te feugait nulla facilisi.</p>
-								</li>
-								<li>
-									<p>Nam liber tempor cum soluta nobis eleifend possim assum</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-
-				</div><!--abt-links end-->
-			</div>
-		</section>
-
-
-
 
 		<footer>
 			<div class="block no-padding">

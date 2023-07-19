@@ -62,14 +62,13 @@ session_start();
 									<li><a href="amenities.php" title="">Amenities </a></li>
 									<li><a href="reservations.php">Reservations</a></li>
 									<?php
-										if (isset($_SESSION["username"])) {
-											echo '<li><a href="profile.php">Profile</a></li>';
-											echo '<li><a href="logout.php">Log Out</a></li>';
-										}
-										else {
-											echo '<li><a href="loginUser.php">Login</a></li>';
-										}
-
+										// if (isset($_SESSION["username"])) {
+										// 	echo '<li><a href="profile.php">Profile</a></li>';
+										// 	echo '<li><a href="logout.php">Log Out</a></li>';
+										// }
+										// else {
+										// 	echo '<li><a href="loginUser.php">Login</a></li>';
+										// }
 									?>
 
 								</ul>
