@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Villa Diwata Resort</title>
+	<link rel="icon" href="images/icon logo.jpg">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Linking Bootstrap css file -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">

@@ -11,6 +11,7 @@ session_start();
 	<meta charset="UTF-8">
 	<title>Villa Diwata Resort</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/icon logo.jpg">
 	<!-- Linking Bootstrap css file -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<!-- Linking Main Css files -->

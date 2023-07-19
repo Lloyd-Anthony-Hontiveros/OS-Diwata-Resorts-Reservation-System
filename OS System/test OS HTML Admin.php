@@ -13,6 +13,7 @@ require_once 'database.php';
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/icon logo.jpg">
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.112.5">
@@ -470,7 +471,6 @@ require_once 'database.php';
 
     //Clear Function
     function clearForm() {
-      document.getElementById("dateInput").value = ""; // Clear the Date input field
       document.getElementById("head-count").value = ""; // Clear the Name input field
     }
 
